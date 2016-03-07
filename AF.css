@@ -49,8 +49,8 @@ body{
 }
 .draggable{
 	float: left;
-	/*position: absolute;*/
-	
+	position: absolute;
+	background-size: contain;
 }
 #face1{
 /*	width: 440px;   positioning from chris  
@@ -58,7 +58,6 @@ body{
 	bottom: 90px;*/
 
 	background-image: url("images/Nay_FaceClip.png");
-	background-size: cover;
 
 	-webkit-shape-outside: url("images/Nay_FaceClip.png");
 	shape-outside: url("images/Nay_FaceClip.png");
@@ -69,7 +68,6 @@ body{
 	top: 40%;*/
 
 	background-image: url("images/SO_FaceClip.png");
-	background-size: cover;
 
 	-webkit-shape-outside: url("images/SO_FaceClip.png");
 	shape-outside: url("images/SO_FaceClip.png");
@@ -80,7 +78,6 @@ body{
 	bottom: 35%;*/
 
 	background-image: url("images/JP_FaceClip.png");
-	background-size: cover;
 
 	-webkit-shape-outside: url("images/JP_FaceClip.png");
 	shape-outside: url("images/JP_FaceClip.png");
@@ -91,7 +88,6 @@ body{
 	top: 25%;*/
 
 	background-image: url("images/99_FaceClip.png");
-	background-size: cover;
 
 	-webkit-shape-outside: url("images/99_FaceClip.png");
 	shape-outside: url("images/99_FaceClip.png");
@@ -102,7 +98,6 @@ body{
 	top: 30px;*/
 
 	background-image: url("images/Riz_FaceClip.png");
-	background-size: cover;
 
 	-webkit-shape-outside: url("images/Riz_FaceClip.png");
 	shape-outside: url("images/Riz_FaceClip.png");
