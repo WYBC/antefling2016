@@ -51,11 +51,15 @@ body{
 	float: left;
 	position: absolute;
 	background-size: contain;
+
+	
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 #face1{
-/*	width: 440px;   positioning from chris  
+	width: 440px;   /*positioning from chris*/  
 	left: 52%;
-	bottom: 90px;*/
+	bottom: 90px;
 
 	background-image: url("images/Nay_FaceClip.png");
 
@@ -63,9 +67,9 @@ body{
 	shape-outside: url("images/Nay_FaceClip.png");
 }
 #face2{
-/*	width: 290px;
+	width: 290px;
 	left: 280px;
-	top: 40%;*/
+	top: 40%;
 
 	background-image: url("images/SO_FaceClip.png");
 
@@ -73,9 +77,9 @@ body{
 	shape-outside: url("images/SO_FaceClip.png");
 }
 #face3{
-/*	width: 350px;
+	width: 350px;
 	right: 280px;
-	bottom: 35%;*/
+	bottom: 35%;
 
 	background-image: url("images/JP_FaceClip.png");
 
@@ -83,9 +87,9 @@ body{
 	shape-outside: url("images/JP_FaceClip.png");
 }
 #face4{
-/*	width: 530px;
+	width: 530px;
 	right: 49%;
-	top: 25%;*/
+	top: 25%;
 
 	background-image: url("images/99_FaceClip.png");
 
@@ -93,9 +97,9 @@ body{
 	shape-outside: url("images/99_FaceClip.png");
 }
 #face5{
-/*	width: 450px;
+	width: 450px;
 	left: 50%;
-	top: 30px;*/
+	top: 30px;
 
 	background-image: url("images/Riz_FaceClip.png");
 
