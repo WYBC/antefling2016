@@ -1,0 +1,82 @@
+body{
+	font-family: "VT323";
+}
+a:link {
+    text-decoration: none;
+    font-weight: lighter;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    font-weight: normal;
+    color: white;
+}
+
+a:hover {
+	text-decoration: none;
+    font-weight: normal;
+    color: #e2c1a4;
+}
+
+a:active {
+	text-decoration: none;
+    font-weight: underline;
+    color: #fffff2;
+}
+.button {
+	position: absolute;
+	background-color: none;
+	z-index: 10000;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	line-height: 15.0px;
+	width: auto;
+	height: auto;
+}
+#button_Enter{
+	left: 50%;
+	bottom: 20px;
+	transform: translate(-50%,-50%);
+}
+img{
+	width: 100%;
+	height: auto;
+}
+body{
+	background-color: black;
+}
+#face1{
+	width: 440px;
+	position: absolute;
+	left: 52%;
+	bottom: 90px;
+	transform: translate(-50%,0%);
+}
+#face2{
+	width: 290px;
+	position: absolute;
+	left: 280px;
+	top: 40%;
+}
+#face3{
+	width: 350px;
+	position: absolute;
+	right: 280px;
+	bottom: 35%;
+}
+#face4{
+	width: 530px;
+	position: absolute;
+	right: 49%;
+	top: 25%;
+	transform: translate(50%,0%);
+}
+#face5{
+	width: 450px;
+	position: absolute;
+	left: 50%;
+	top: 30px;
+	transform: translate(-50%,0%);
+}
