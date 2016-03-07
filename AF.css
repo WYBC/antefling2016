@@ -47,7 +47,68 @@ img{
 body{
 	background-color: black;
 }
+.draggable{
+	float: left;
+	/*position: absolute;*/
+	
+}
 #face1{
+/*	width: 440px;   positioning from chris  
+	left: 52%;
+	bottom: 90px;*/
+
+	background-image: url("images/Nay_FaceClip.png");
+	background-size: cover;
+
+	-webkit-shape-outside: url("images/Nay_FaceClip.png");
+	shape-outside: url("images/Nay_FaceClip.png");
+}
+#face2{
+/*	width: 290px;
+	left: 280px;
+	top: 40%;*/
+
+	background-image: url("images/SO_FaceClip.png");
+	background-size: cover;
+
+	-webkit-shape-outside: url("images/SO_FaceClip.png");
+	shape-outside: url("images/SO_FaceClip.png");
+}
+#face3{
+/*	width: 350px;
+	right: 280px;
+	bottom: 35%;*/
+
+	background-image: url("images/JP_FaceClip.png");
+	background-size: cover;
+
+	-webkit-shape-outside: url("images/JP_FaceClip.png");
+	shape-outside: url("images/JP_FaceClip.png");
+}
+#face4{
+/*	width: 530px;
+	right: 49%;
+	top: 25%;*/
+
+	background-image: url("images/99_FaceClip.png");
+	background-size: cover;
+
+	-webkit-shape-outside: url("images/99_FaceClip.png");
+	shape-outside: url("images/99_FaceClip.png");
+}
+#face5{
+/*	width: 450px;
+	left: 50%;
+	top: 30px;*/
+
+	background-image: url("images/Riz_FaceClip.png");
+	background-size: cover;
+
+	-webkit-shape-outside: url("images/Riz_FaceClip.png");
+	shape-outside: url("images/Riz_FaceClip.png");
+
+}
+/*#face1{
 	width: 440px;
 	position: absolute;
 	left: 52%;
@@ -79,4 +140,4 @@ body{
 	left: 50%;
 	top: 30px;
 	transform: translate(-50%,0%);
-}
+}*/
