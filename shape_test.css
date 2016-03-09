@@ -1,0 +1,12 @@
+img{
+	width: 100%;
+	height: auto;
+}
+body{
+	background-color: black;
+}
+#face1{
+	width: 440px;   /*positioning from chris*/  
+	left: 52%;
+	bottom: 90px;
+}

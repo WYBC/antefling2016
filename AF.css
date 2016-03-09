@@ -91,7 +91,7 @@ body{
 	right: 49%;
 	top: 25%;
 
-	background-image: url("images/99_FaceClip.png");
+	/*background-image: url("images/99_FaceClip.png");*/
 
 	-webkit-shape-outside: url("images/99_FaceClip.png");
 	shape-outside: url("images/99_FaceClip.png");
