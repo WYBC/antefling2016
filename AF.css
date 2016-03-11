@@ -43,68 +43,108 @@ a:active {
 img{
 	width: 100%;
 	height: auto;
+	
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
 }
 body{
 	background-color: black;
 }
 .draggable{
-	float: left;
-	position: absolute;
+	/*float: left;*/
+	/*position: absolute;*/
 	background-size: contain;
 
+  -webkit-shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
+  shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
+  -webkit-clip-path: polygon(0 0,24 166,530 54,518 0,0 0);
 	
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+/*  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);*/
 }
 #face1{
-	width: 440px;   /*positioning from chris*/  
-	left: 52%;
-	bottom: 90px;
+	width: 440px;
+/*
+	  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);*/
 
-	background-image: url("images/Nay_FaceClip.png");
+/*	background-image: url("images/Nay_FaceClip.png");
 
 	-webkit-shape-outside: url("images/Nay_FaceClip.png");
-	shape-outside: url("images/Nay_FaceClip.png");
+	shape-outside: url("images/Nay_FaceClip.png");*/
 }
 #face2{
 	width: 290px;
-	left: 280px;
-	top: 40%;
+/*
+	  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);*/
 
-	background-image: url("images/SO_FaceClip.png");
+/*	background-image: url("images/SO_FaceClip.png");
 
 	-webkit-shape-outside: url("images/SO_FaceClip.png");
-	shape-outside: url("images/SO_FaceClip.png");
+	shape-outside: url("images/SO_FaceClip.png");*/
 }
 #face3{
 	width: 350px;
-	right: 280px;
-	bottom: 35%;
+/*
+	  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);*/
 
-	background-image: url("images/JP_FaceClip.png");
+/*	background-image: url("images/JP_FaceClip.png");
 
 	-webkit-shape-outside: url("images/JP_FaceClip.png");
-	shape-outside: url("images/JP_FaceClip.png");
+	shape-outside: url("images/JP_FaceClip.png");*/
 }
 #face4{
 	width: 530px;
-	right: 49%;
-	top: 25%;
+/*
+	  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);*/
 
-	/*background-image: url("images/99_FaceClip.png");*/
+	/*background-image: url("images/99_FaceClip2.png");*/
 
-	-webkit-shape-outside: url("images/99_FaceClip.png");
-	shape-outside: url("images/99_FaceClip.png");
+/*	-webkit-shape-outside: url("images/99_FaceClip.png");
+	shape-outside: url("images/99_FaceClip.png");*/
+
+	z-index: 5;
+}
+map{
+	pointer-events: none !important;
+	cursor: default;
+    display:block;
+    background:none !important;
+
+    -webkit-pointer-events: none;
+	-webkit-cursor: crosshair;
+    -webkit-display:block;
+
+    z-index: 0;
+}
+area{
+	pointer-events: none !important;
+	cursor: default;
+    display:block;
+    background:none !important;
+
+    -webkit-pointer-events: none;
+	-webkit-cursor: crosshair;
+    -webkit-display:block;
+
+    z-index: 0;
 }
 #face5{
 	width: 450px;
-	left: 50%;
-	top: 30px;
+/*
+	  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);*/
 
-	background-image: url("images/Riz_FaceClip.png");
+/*	background-image: url("images/Riz_FaceClip.png");
 
 	-webkit-shape-outside: url("images/Riz_FaceClip.png");
-	shape-outside: url("images/Riz_FaceClip.png");
+	shape-outside: url("images/Riz_FaceClip.png");*/
 
 }
 /*#face1{
