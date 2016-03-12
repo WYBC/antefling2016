@@ -109,7 +109,7 @@ body{
 /*	-webkit-shape-outside: url("images/99_FaceClip.png");
 	shape-outside: url("images/99_FaceClip.png");*/
 
-	z-index: 5;
+	/*z-index: 5;*/
 }
 map{
 	pointer-events: none !important;

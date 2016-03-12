@@ -60,12 +60,20 @@ pic.draggable({
     // console.log(x_offset);
     // console.log(y_offset);
 
-    if (x_offset > 500) {
-      console.log(x_offset);
-      pic.draggable(false);   
-    } else {
-      pic.draggable(true);
-    };
+      // console.log(x_offset);
+      // pic.draggable(false);  
+
+    if (x_offset < 24) {
+      if (y_offset > (166.0 * x_offset)/24.0) {pic.draggable(false);} else {pic.draggable(true);};
+    } else if (x_offset < 518) {
+      if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {pic.draggable(false);} else {pic.draggable(true);};
+    } else if (x_offset < 530) {
+      if (y_offset < 54) {
+        if (y_offset < ((54.0 * x_offset)/12.0 - 2331)) {pic.draggable(false);} else {pic.draggable(true);};
+      } else {
+        if (y_offset > ((112.0 * x_offset)/506.0 + 171.3)) {pic.draggable(false);} else {pic.draggable(true);};
+      };
+    } else {pic.draggable(true);};
   }
 
   pic.on("down", checkBoundsFace4);
