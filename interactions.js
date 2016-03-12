@@ -143,6 +143,63 @@ var face5_object = interact('#face5').draggable({
     target.setAttribute('data-y', y);
   }
 
+  function checkBoundsFace1 (event){
+    var x_offset = event.pageX - $('#face1').offset().left;
+    var y_offset = event.pageY - $('#face1').offset().top;
+
+    if (x_offset < 7) {
+      if (y_offset > x_offset) {
+        if (y_offset > (140.0 * x_offset)/7.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+      } else {
+        if (y_offset < (6.0 * x_offset)/387.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+      };
+    } else if (x_offset < 387) {
+      if (y_offset < (6.0 * x_offset)/387.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+    } else if (x_offset < 440) {
+        if (y_offset < ((134.0 * x_offset)/53.0 - 972.45)) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+    } else {face1_object.draggable(true);};
+  }
+
+  face1_object.on("down", checkBoundsFace1);
+
+  function checkBoundsFace2 (event){
+    var x_offset = event.pageX - $('#face2').offset().left;
+    var y_offset = event.pageY - $('#face2').offset().top;
+
+    if (x_offset < 22) {
+      if (y_offset > (166.0 * x_offset)/22.0) {face2_object.draggable(false);} else {face2_object.draggable(true);};
+    } else if (x_offset < 518) {
+      if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {face2_object.draggable(false);} else {face2_object.draggable(true);};
+    } else if (x_offset < 530) {
+      if (y_offset < 52) {
+        if (y_offset < ((52.0 * x_offset)/12.0 - 2331)) {face2_object.draggable(false);} else {face2_object.draggable(true);};
+      } else {
+        if (y_offset > ((112.0 * x_offset)/506.0 + 171.3)) {face2_object.draggable(false);} else {face2_object.draggable(true);};
+      };
+    } else {face2_object.draggable(true);};
+  }
+
+  face4_object.on("down", checkBoundsFace2);
+
+  function checkBoundsFace3 (event){
+    var x_offset = event.pageX - $('#face3').offset().left;
+    var y_offset = event.pageY - $('#face3').offset().top;
+
+    if (x_offset < 23) {
+      if (y_offset > (166.0 * x_offset)/23.0) {face3_object.draggable(false);} else {face3_object.draggable(true);};
+    } else if (x_offset < 518) {
+      if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {face3_object.draggable(false);} else {face3_object.draggable(true);};
+    } else if (x_offset < 530) {
+      if (y_offset < 53) {
+        if (y_offset < ((53.0 * x_offset)/12.0 - 2331)) {face3_object.draggable(false);} else {face3_object.draggable(true);};
+      } else {
+        if (y_offset > ((112.0 * x_offset)/506.0 + 171.3)) {face3_object.draggable(false);} else {face3_object.draggable(true);};
+      };
+    } else {face3_object.draggable(true);};
+  }
+
+  face3_object.on("down", checkBoundsFace3);
+
   function checkBoundsFace4 (event){
     var x_offset = event.pageX - $('#face4').offset().left;
     var y_offset = event.pageY - $('#face4').offset().top;
@@ -161,3 +218,22 @@ var face5_object = interact('#face5').draggable({
   }
 
   face4_object.on("down", checkBoundsFace4);
+
+    function checkBoundsFace5 (event){
+    var x_offset = event.pageX - $('#face5').offset().left;
+    var y_offset = event.pageY - $('#face5').offset().top;
+
+    if (x_offset < 25) {
+      if (y_offset > (166.0 * x_offset)/25.0) {face5_object.draggable(false);} else {face5_object.draggable(true);};
+    } else if (x_offset < 518) {
+      if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {face5_object.draggable(false);} else {face5_object.draggable(true);};
+    } else if (x_offset < 530) {
+      if (y_offset < 55) {
+        if (y_offset < ((55.0 * x_offset)/12.0 - 2331)) {face5_object.draggable(false);} else {face5_object.draggable(true);};
+      } else {
+        if (y_offset > ((112.0 * x_offset)/506.0 + 171.3)) {face5_object.draggable(false);} else {face5_object.draggable(true);};
+      };
+    } else {face5_object.draggable(true);};
+  }
+
+  face5_object.on("down", checkBoundsFace5);
