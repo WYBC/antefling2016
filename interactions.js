@@ -166,16 +166,17 @@ var face5_object = interact('#face5').draggable({
     var x_offset = event.pageX - $('#face2').offset().left;
     var y_offset = event.pageY - $('#face2').offset().top;
 
-    if (x_offset < 22) {
-      if (y_offset > (166.0 * x_offset)/22.0) {face2_object.draggable(false);} else {face2_object.draggable(true);};
-    } else if (x_offset < 518) {
-      if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {face2_object.draggable(false);} else {face2_object.draggable(true);};
-    } else if (x_offset < 530) {
-      if (y_offset < 52) {
-        if (y_offset < ((52.0 * x_offset)/12.0 - 2331)) {face2_object.draggable(false);} else {face2_object.draggable(true);};
-      } else {
-        if (y_offset > ((112.0 * x_offset)/506.0 + 171.3)) {face2_object.draggable(false);} else {face2_object.draggable(true);};
+    if (x_offset < 12) { // isolate overhanging (left) edge
+      if (y_offset < (-x_offset + 207)) {
+        if (y_offset < (-207.0 * x_offset)/12.0 + 207.0) {face2_object.draggable(false);} else {face2_object.draggable(true);};
+      } else{
+        if (y_offset > (-81.0 * x_offset)/290.0 + 207.0) {face2_object.draggable(false);} else {face2_object.draggable(true);};
       };
+      } else if (x_offset < 290) {
+        if ((y_offset > (-81.0 * x_offset)/290.0 + 207.0) ||
+          (y_offset < (18.0 * x_offset)/254.0 - 1.0) ||
+          (y_offset < (108.0 * x_offset)/22.0 - 1297.64)) 
+          {face2_object.draggable(false);} else {face2_object.draggable(true);};
     } else {face2_object.draggable(true);};
   }
 
