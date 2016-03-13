@@ -147,15 +147,19 @@ var face5_object = interact('#face5').draggable({
     var x_offset = event.pageX - $('#face1').offset().left;
     var y_offset = event.pageY - $('#face1').offset().top;
 
-    if (x_offset < 7) {
-      if (y_offset > x_offset) {
+    if (x_offset < 7) { // isolate left edge
+      if (y_offset > x_offset) { // differentiate top edge of corner
+        // left edge
         if (y_offset > (140.0 * x_offset)/7.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
       } else {
+        // top edge
         if (y_offset < (6.0 * x_offset)/387.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
       };
-    } else if (x_offset < 387) {
+    } else if (x_offset < 387) { // middle section
+      // top edge
       if (y_offset < (6.0 * x_offset)/387.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
-    } else if (x_offset < 440) {
+    } else if (x_offset < 440) { // right section
+        // right edge
         if (y_offset < ((134.0 * x_offset)/53.0 - 972.45)) {face1_object.draggable(false);} else {face1_object.draggable(true);};
     } else {face1_object.draggable(true);};
   }
@@ -167,20 +171,24 @@ var face5_object = interact('#face5').draggable({
     var y_offset = event.pageY - $('#face2').offset().top;
 
     if (x_offset < 12) { // isolate overhanging (left) edge
+
+      // test for left edge vs. lower left corner
       if (y_offset < (-x_offset + 207)) {
+        // left edge
         if (y_offset < (-207.0 * x_offset)/12.0 + 207.0) {face2_object.draggable(false);} else {face2_object.draggable(true);};
       } else{
+        // bottom edge
         if (y_offset > (-81.0 * x_offset)/290.0 + 207.0) {face2_object.draggable(false);} else {face2_object.draggable(true);};
       };
-      } else if (x_offset < 290) {
-        if ((y_offset > (-81.0 * x_offset)/290.0 + 207.0) ||
-          (y_offset < (18.0 * x_offset)/254.0 - 1.0) ||
-          (y_offset < (108.0 * x_offset)/22.0 - 1297.64)) 
+    } else if (x_offset < 290) {
+      if ((y_offset > (-81.0 * x_offset)/290.0 + 207.0) ||  // bottom edge
+        (y_offset < (18.0 * x_offset)/254.0 - 1.0) ||       // top edge
+        (y_offset < (108.0 * x_offset)/22.0 - 1297.64))     // right edge
           {face2_object.draggable(false);} else {face2_object.draggable(true);};
     } else {face2_object.draggable(true);};
   }
 
-  face4_object.on("down", checkBoundsFace2);
+  face2_object.on("down", checkBoundsFace2);
 
   function checkBoundsFace3 (event){
     var x_offset = event.pageX - $('#face3').offset().left;
@@ -205,15 +213,19 @@ var face5_object = interact('#face5').draggable({
     var x_offset = event.pageX - $('#face4').offset().left;
     var y_offset = event.pageY - $('#face4').offset().top;
 
-    if (x_offset < 24) {
+    if (x_offset < 24) { // left bit
+      // left edge
       if (y_offset > (166.0 * x_offset)/24.0) {face4_object.draggable(false);} else {face4_object.draggable(true);};
-    } else if (x_offset < 518) {
+    } else if (x_offset < 518) { // middle section
+      // bottom edge
       if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {face4_object.draggable(false);} else {face4_object.draggable(true);};
-    } else if (x_offset < 530) {
-      if (y_offset < 54) {
+    } else if (x_offset < 530) { // right section
+      if (y_offset < 54) { // above or below corner
+        // right edge
         if (y_offset < ((54.0 * x_offset)/12.0 - 2331)) {face4_object.draggable(false);} else {face4_object.draggable(true);};
       } else {
-        if (y_offset > ((112.0 * x_offset)/506.0 + 171.3)) {face4_object.draggable(false);} else {face4_object.draggable(true);};
+        // bottom edge
+        if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {face4_object.draggable(false);} else {face4_object.draggable(true);};
       };
     } else {face4_object.draggable(true);};
   }
