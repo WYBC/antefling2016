@@ -1,0 +1,38 @@
+img{
+	position: relative;
+
+	width: 100%;
+	height: auto;
+	
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+body{
+	background-color: black;
+}
+#face1{
+	width: 440px;
+
+	  -webkit-shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
+  shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
+  -webkit-clip-path: polygon(0 0,24 166,530 54,518 0,0 0);
+  clip-path: polygon(0 0,24 166,530 54,518 0,0 0);
+}
+#face5{
+	width: 450px;
+
+	  -webkit-shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
+  shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
+  -webkit-clip-path: polygon(0 0,24 166,530 54,518 0,0 0);
+  clip-path: polygon(0 0,24 166,530 54,518 0,0 0);
+}
+
+#face1:hover{
+	background-image: url(images/Nay_FaceClip2.png);
+}
+#face5:hover{
+	background-image: url(images/Riz_FaceClip2.png);
+}
