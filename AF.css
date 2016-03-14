@@ -41,6 +41,8 @@ a:active {
 	transform: translate(-50%,-50%);
 }
 img{
+	position: relative;
+
 	width: 100%;
 	height: auto;
 	
@@ -110,30 +112,6 @@ body{
 	shape-outside: url("images/99_FaceClip.png");*/
 
 	/*z-index: 5;*/
-}
-map{
-	pointer-events: none !important;
-	cursor: default;
-    display:block;
-    background:none !important;
-
-    -webkit-pointer-events: none;
-	-webkit-cursor: crosshair;
-    -webkit-display:block;
-
-    z-index: 0;
-}
-area{
-	pointer-events: none !important;
-	cursor: default;
-    display:block;
-    background:none !important;
-
-    -webkit-pointer-events: none;
-	-webkit-cursor: crosshair;
-    -webkit-display:block;
-
-    z-index: 0;
 }
 #face5{
 	width: 450px;
