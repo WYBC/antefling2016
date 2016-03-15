@@ -155,6 +155,16 @@ function demote(element, interactible, event){
     console.log("face5 ", $('#face5').css("zIndex"));
   }
 
+window.onload = function() {
+  // code to handle page loading
+  // TODO
+
+  // assign"zIndex"s to faces
+  $('#face1').css("zIndex",1);
+  $('#face5').css("zIndex",2);
+  listAllZ();
+};
+
 // set initial z-indexes (using window.onload in live version)
 $('#face1').css("zIndex",1);
 $('#face5').css("zIndex",2);
