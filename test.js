@@ -146,7 +146,14 @@ function demote(element, interactible, event){
           e = new MouseEvent("mousedown", {clientX: event.pageX, clientY: event.pageY});
           var cancelled = !elem.dispatchEvent(e);
     });
+
+    listAllZ();
 }
+
+  function listAllZ(){
+    console.log("face1 ", $('#face1').css("zIndex"));
+    console.log("face5 ", $('#face5').css("zIndex"));
+  }
 
 // set initial z-indexes (using window.onload in live version)
 $('#face1').css("zIndex",1);
