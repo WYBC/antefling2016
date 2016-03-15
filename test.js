@@ -4,7 +4,6 @@
 // make face1 draggable
 var face1_object = interact('#face1').draggable({
     max: 5,
-    manualStart: false,
     // enable inertial throwing
     inertia: false,
     // keep the element within the area of it's parent
@@ -24,7 +23,6 @@ var face1_object = interact('#face1').draggable({
 // make face5 draggable
 var face5_object = interact('#face5').draggable({
     max: 5,
-    manualStart: false,
     // enable inertial throwing
     inertia: false,
     // keep the element within the area of it's parent
@@ -68,17 +66,26 @@ function checkBoundsFace1 (event){
     if (x_offset < 7) { // isolate left edge
       if (y_offset > x_offset) { // differentiate top edge of corner
         // left edge
-        if (y_offset > (140.0 * x_offset)/7.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+        if (y_offset > (140.0 * x_offset)/7.0) {
+        face1_object.draggable(false);
+        demote($('#face1'), face1_object, event);
+        } else {face1_object.draggable(true);};
       } else {
         // top edge
-        if (y_offset < (6.0 * x_offset)/387.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+        if (y_offset < (6.0 * x_offset)/387.0) {
+        face1_object.draggable(false);
+        demote($('#face1'), face1_object, event);
+        } else {face1_object.draggable(true);};
       };
     } else if (x_offset < 387) { // middle section
       // top edge
       if (y_offset < (6.0 * x_offset)/387.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
     } else if (x_offset < 440) { // right section
         // right edge
-        if (y_offset < ((134.0 * x_offset)/53.0 - 972.45)) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+        if (y_offset < ((134.0 * x_offset)/53.0 - 972.45)) {
+        face1_object.draggable(false);
+        demote($('#face1'), face1_object, event);
+        } else {face1_object.draggable(true);};
     } else {face1_object.draggable(true);};
 }
 
@@ -86,7 +93,6 @@ face1_object.on("down", checkBoundsFace1);
 
 // see if user has clicked the actual image area
 function checkBoundsFace5 (event){
-      console.log("checking face 5");
 
     var x_offset = event.pageX - $('#face5').offset().left;
     var y_offset = event.pageY - $('#face5').offset().top;
@@ -94,13 +100,9 @@ function checkBoundsFace5 (event){
     // left: y = -132.0x/29.0 + 132.0
     // right: y = 132.0x/31.0 - 1784.13
 
-    console.log(x_offset);
-    console.log(y_offset);
-
     if ((y_offset < (-132.0 * x_offset)/29.0 + 132.0) ||
       (y_offset < (132.0 * x_offset)/31.0 - 1784.13)) {
-      console.log("stop.");
-      // face5_object.draggable(false);
+      face5_object.draggable(false);
       demote($('#face5'), face5_object, event);
     } else { 
       face5_object.draggable(true);
@@ -110,11 +112,13 @@ function checkBoundsFace5 (event){
 
 face5_object.on("down", checkBoundsFace5);
 
+// set handlers to test re-fire
+$("#face1").on("mousedown", console.log("face1 down"));
+$("#face5").on("mousedown", console.log("face5 down"));
+
 /*    PART 2: NON-FUNCTIONAL    */
 /*    REORDER LAYERS and RE-FIRE 'down' event    */
 
-// TODO: call everywhere
-// TODO: restructure everything so the check functions return a bool
 // code to re-assign "zIndex"s
 function demote(element, interactible, event){
     
@@ -144,32 +148,6 @@ function demote(element, interactible, event){
     });
 }
 
-// TODO: call this on successful click/drag
-// code to re-assign "zIndex"s
-function promote(element, interactible, event){
-    
-    // block dragging on element
-    // interactible.draggable(false);
-    
-    // get all images higher than the target 
-    var z = element.css("zIndex");
-    var images = $("img").filter(function() {
-    return Number($(this).css("zIndex")) > z;
-  });
-    
-    // pull the target to the front
-    element.css("zIndex",5);
-
-    // demote all higher events
-    $(images).each( function () {
-          // move element up
-          $(this).css("zIndex",Number($(this).css("zIndex"))-1);
-    });
-}
-
-// initialize z-index
-window.onload = function() {
-  // assign"zIndex"s to faces
-  $('#face1').css("zIndex",1);
-  $('#face5').css("zIndex",2);
-};
+// set initial z-indexes (using window.onload in live version)
+$('#face1').css("zIndex",1);
+$('#face5').css("zIndex",2);

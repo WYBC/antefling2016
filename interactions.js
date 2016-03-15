@@ -322,6 +322,9 @@ var face5_object = interact('#face5').draggable({
   }
 */
 
+// TODO -- make promote function (launched on click) so that you do not drag it behind other elements
+// TODO -- change to making pointer-events none? (reset all on end drag, still need to re-fire event)
+
 // code to re-assign "zIndex"s
 function demote(element, interactible, event){
     
@@ -368,7 +371,9 @@ function demote(element, interactible, event){
 // $('#canvas_element').trigger(e);
 
 window.onload = function() {
-    // code to handle page loading
+  // code to handle page loading
+  // TODO
+
   // assign"zIndex"s to faces
   $('#face1').css("zIndex",1);
   $('#face2').css("zIndex",5);
@@ -376,7 +381,6 @@ window.onload = function() {
   $('#face4').css("zIndex",4);
   $('#face5').css("zIndex",2);
   listAllZ();
-
 };
 
 $("#face1").on("mousedown", checkBoundsFace1);
