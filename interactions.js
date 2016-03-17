@@ -389,3 +389,19 @@ $("#face3").on("mousedown", checkBoundsFace3);
 $("#face4").on("mousedown", checkBoundsFace4);
 $("#face5").on("mousedown", checkBoundsFace5);
 
+// could use visibility and css transitions
+// http://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/
+
+interact('.welcome').on('doubletap', function (event) {
+    $(".welcome").css("zIndex",-10).css("visibility","hidden");
+  })
+
+interact('.overlay').on('doubletap', function (event) {
+    $(".overlay").css("zIndex",-10).css("visibility","hidden");
+    $(".shadow").css("zIndex",-10).css("visibility","hidden");
+  })
+
+face1_object.on('doubletap', function (event) {
+    $("#nay-overlay").css("zIndex",10).css("visibility","visible");
+    $("#nay-shadow").css("zIndex",9).css("visibility","visible");
+  })
