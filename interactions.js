@@ -149,18 +149,40 @@ var face5_object = interact('#face5').draggable({
     if (x_offset < 7) { // isolate left edge
       if (y_offset > x_offset) { // differentiate top edge of corner
         // left edge
-        if (y_offset > (140.0 * x_offset)/7.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+        if (y_offset > (140.0 * x_offset)/7.0) {
+          face1_object.draggable(false);
+          demote($('#face1'), face1_object, event);        
+        } else {
+          promote($('#face1'), face1_object, event);
+          face1_object.draggable(true);};
       } else {
         // top edge
-        if (y_offset < (6.0 * x_offset)/387.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+        if (y_offset < (6.0 * x_offset)/387.0) {
+          face1_object.draggable(false);
+          demote($('#face1'), face1_object, event);        
+        } else {
+          promote($('#face1'), face1_object, event);
+          face1_object.draggable(true);};
       };
     } else if (x_offset < 387) { // middle section
       // top edge
-      if (y_offset < (6.0 * x_offset)/387.0) {face1_object.draggable(false);} else {face1_object.draggable(true);};
+      if (y_offset < (6.0 * x_offset)/387.0) {
+        face1_object.draggable(false);
+        demote($('#face1'), face1_object, event);        
+      } else {
+        promote($('#face1'), face1_object, event);
+        face1_object.draggable(true);};
     } else if (x_offset < 440) { // right section
         // right edge
-        if (y_offset < ((134.0 * x_offset)/53.0 - 972.45)) {face1_object.draggable(false);} else {face1_object.draggable(true);};
-    } else {face1_object.draggable(true);};
+        if (y_offset < ((134.0 * x_offset)/53.0 - 972.45)) {
+          face1_object.draggable(false);
+          demote($('#face1'), face1_object, event);        
+        } else {
+          promote($('#face1'), face1_object, event);
+          face1_object.draggable(true);};
+    } else {
+      promote($('#face1'), face1_object, event);
+      face1_object.draggable(true);};
   }
 
   face1_object.on("down", checkBoundsFace1);
@@ -176,17 +198,34 @@ var face5_object = interact('#face5').draggable({
       // test for left edge vs. lower left corner
       if (y_offset < (-x_offset + 207)) {
         // left edge
-        if (y_offset < (-207.0 * x_offset)/12.0 + 207.0) {face2_object.draggable(false);} else {face2_object.draggable(true);};
+        if (y_offset < (-207.0 * x_offset)/12.0 + 207.0) {
+          face2_object.draggable(false);
+          demote($('#face2'), face2_object, event);
+        } else {
+          promote($('#face2'), face2_object, event);
+          face2_object.draggable(true);};
       } else{
         // bottom edge
-        if (y_offset > (-81.0 * x_offset)/290.0 + 207.0) {face2_object.draggable(false);} else {face2_object.draggable(true);};
+        if (y_offset > (-81.0 * x_offset)/290.0 + 207.0) {
+          face2_object.draggable(false);
+          demote($('#face2'), face2_object, event);
+        } else {
+          promote($('#face2'), face2_object, event);
+          face2_object.draggable(true);};
       };
     } else if (x_offset < 290) {
       if ((y_offset > (-81.0 * x_offset)/290.0 + 207.0) ||  // bottom edge
         (y_offset < (18.0 * x_offset)/254.0 - 1.0) ||       // top edge
         (y_offset < (108.0 * x_offset)/22.0 - 1297.64))     // right edge
-          {face2_object.draggable(false);} else {face2_object.draggable(true);};
-    } else {face2_object.draggable(true);};
+          {
+            face2_object.draggable(false);
+          demote($('#face2'), face2_object, event);
+          } else {
+            promote($('#face2'), face2_object, event);
+            face2_object.draggable(true);};
+    } else {
+      promote($('#face2'), face2_object, event);
+      face2_object.draggable(true);};
   }
 
   face2_object.on("down", checkBoundsFace2);
@@ -207,7 +246,9 @@ var face5_object = interact('#face5').draggable({
       (x_offset < (6.0 * y_offset)/172.0 - 0.42) ||
       (x_offset > (15.0 * y_offset)/178.0 + 334.9)) {
       face3_object.draggable(false);
+      demote($('#face3'), face3_object, event);
     } else { 
+      promote($('#face3'), face3_object, event);
       face3_object.draggable(true);
     };
   }
@@ -222,19 +263,41 @@ var face5_object = interact('#face5').draggable({
 
     if (x_offset < 24) { // left bit
       // left edge
-      if (y_offset > (166.0 * x_offset)/24.0) {face4_object.draggable(false);} else {face4_object.draggable(true);};
+      if (y_offset > (166.0 * x_offset)/24.0) {
+        face4_object.draggable(false);
+        demote($('#face4'), face4_object, event);
+      } else {
+        promote($('#face4'), face4_object, event);
+        face4_object.draggable(true);};
     } else if (x_offset < 518) { // middle section
       // bottom edge
-      if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {face4_object.draggable(false);} else {face4_object.draggable(true);};
+      if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {
+        face4_object.draggable(false);
+        demote($('#face4'), face4_object, event);
+      } else {
+        promote($('#face4'), face4_object, event);
+        face4_object.draggable(true);};
     } else if (x_offset < 530) { // right section
       if (y_offset < 54) { // above or below corner
         // right edge
-        if (y_offset < ((54.0 * x_offset)/12.0 - 2331)) {face4_object.draggable(false);} else {face4_object.draggable(true);};
+        if (y_offset < ((54.0 * x_offset)/12.0 - 2331)) {
+          face4_object.draggable(false);
+          demote($('#face4'), face4_object, event);
+        } else {
+        promote($('#face4'), face4_object, event);
+          face4_object.draggable(true);};
       } else {
         // bottom edge
-        if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {face4_object.draggable(false);} else {face4_object.draggable(true);};
+        if (y_offset > ((-112.0 * x_offset)/506.0 + 171.3)) {
+          face4_object.draggable(false);
+          demote($('#face4'), face4_object, event);
+        } else {
+        promote($('#face4'), face4_object, event);
+          face4_object.draggable(true);};
       };
-    } else {face4_object.draggable(true);};
+    } else {
+        promote($('#face4'), face4_object, event);
+      face4_object.draggable(true);};
   }
 
   face4_object.on("down", checkBoundsFace4);
@@ -254,9 +317,10 @@ var face5_object = interact('#face5').draggable({
     if ((y_offset < (-132.0 * x_offset)/29.0 + 132.0) ||
       (y_offset < (132.0 * x_offset)/31.0 - 1784.13)) {
       console.log("stop.");
-      // face5_object.draggable(false);
+      face5_object.draggable(false);
       demote($('#face5'), face5_object, event);
     } else { 
+      promote($('#face5'), face5_object, event);
       face5_object.draggable(true);
     };
 
@@ -271,56 +335,6 @@ var face5_object = interact('#face5').draggable({
     console.log("face4 ", $('#face4').css("zIndex"));
     console.log("face5 ", $('#face5').css("zIndex"));
   }
-/*
-  // code to re-assign"zIndex"s
-  function demote(element, interactible, event){
-    interactible.draggable(false);
-
-    console.log("z: " , element.css("zIndex"));
-
-    var z = element.css("zIndex");
-
-     console.log("event:");
-     console.log(event);
-     console.log(event.pageX);
-     console.log(event.pageY);
-
-    var images = $("img");
-    $(images).each( function () {
-        var this_z = Number($(this).css("zIndex"));
-        if(this_z < z){
-          $(this).css("zIndex",this_z+1);
-
-          // // re-fire event if element is below current target
-          // var e = jQuery.Event( "mousedown", { pageX: event.pageX, pageY: event.pageY } );
-
-          // console.log("new event:");
-          // console.log(e);
-
-          // $(this).simulate(e);
-
-          // console.log("target:");
-          // console.log(this);
-          // console.log("new event:");
-          // console.log(e);
-
-          elem = document.getElementById($(this).attr('id'));
-
-          elem.addEventListener("mousedown", listAllZ)
-
-          console.log("elem: ", elem)
-          // Create the event.
-          e = new MouseEvent("mousedown", {clientX: event.pageX, clientY: event.pageY});
-          var cancelled = !elem.dispatchEvent(e);
-          console.log("cancelled: ", cancelled)
-        };
-    });
-
-    element.css("zIndex",1);
-    console.log("z: " , element.css("zIndex"));
-    listAllZ();
-  }
-*/
 
 // TODO -- make promote function (launched on click) so that you do not drag it behind other elements
 // TODO -- change to making pointer-events none? (reset all on end drag, still need to re-fire event)
@@ -351,6 +365,30 @@ function demote(element, interactible, event){
           // Create the event.
           e = new MouseEvent("mousedown", {clientX: event.pageX, clientY: event.pageY});
           var cancelled = !elem.dispatchEvent(e);
+    });
+
+    listAllZ();
+}
+
+// code to re-assign "zIndex"s
+function promote(element, interactible, event){
+    
+    // block dragging on element
+    interactible.draggable(false);
+    
+    // get all images higher than the target 
+    var z = element.css("zIndex");
+    var images = $("img").filter(function() {
+    return Number($(this).css("zIndex")) > z;
+  });
+    
+    // push the target to the front
+    element.css("zIndex",5);
+
+    // re-process all lower events
+    $(images).each( function () {
+          // move element down
+          $(this).css("zIndex",Number($(this).css("zIndex"))-1);
     });
 
     listAllZ();
@@ -404,4 +442,24 @@ interact('.overlay').on('doubletap', function (event) {
 face1_object.on('doubletap', function (event) {
     $("#nay-overlay").css("zIndex",10).css("visibility","visible");
     $("#nay-shadow").css("zIndex",9).css("visibility","visible");
+  })
+
+face2_object.on('doubletap', function (event) {
+    $("#SO-overlay").css("zIndex",10).css("visibility","visible");
+    $("#SO-shadow").css("zIndex",9).css("visibility","visible");
+  })
+
+face3_object.on('doubletap', function (event) {
+    $("#JP-overlay").css("zIndex",10).css("visibility","visible");
+    $("#JP-shadow").css("zIndex",9).css("visibility","visible");
+  })
+
+face4_object.on('doubletap', function (event) {
+    $("#99-overlay").css("zIndex",10).css("visibility","visible");
+    $("#99-shadow").css("zIndex",9).css("visibility","visible");
+  })
+
+face5_object.on('doubletap', function (event) {
+    $("#riz-overlay").css("zIndex",10).css("visibility","visible");
+    $("#riz-shadow").css("zIndex",9).css("visibility","visible");
   })
