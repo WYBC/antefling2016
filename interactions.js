@@ -336,8 +336,7 @@ var face5_object = interact('#face5').draggable({
     console.log("face5 ", $('#face5').css("zIndex"));
   }
 
-// TODO -- make promote function (launched on click) so that you do not drag it behind other elements
-// TODO -- change to making pointer-events none? (reset all on end drag, still need to re-fire event)
+
 
 // code to re-assign "zIndex"s
 function demote(element, interactible, event){
@@ -393,9 +392,6 @@ function promote(element, interactible, event){
 
     listAllZ();
 }
-
-// could use visibility and css transitions
-// http://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/
 
 interact('.welcome').on('doubletap', function (event) {
     $(".welcome").css("zIndex",-10).css("visibility","hidden");
@@ -616,44 +612,6 @@ face5_object.on('doubletap', function (event) {
 
 window.onload = function() {
   // code to handle page loading
-  // TODO: wait to allow entrance until after loading
-  // TODO: flashing dots
-  // TODO: positioning
-  // TODO: youtube?
-
-  // nay_widget         = SC.Widget("nay-iframe");
-  // SO_widget         = SC.Widget("SO-iframe");
-  // JP_widget         = SC.Widget("JP-iframe");
-  // sub_widget         = SC.Widget("99-iframe");
-  // riz_widget         = SC.Widget("riz-iframe");
-
-  // nay_widget_loaded = false;         
-  // SO_widget_loaded = false;         
-  // JP_widget_loaded = false;         
-  // sub_widget_loaded = false;         
-  // riz_widget_loaded = false;         
-
-  // TODO: bind to loading events for smoother playback effect
-
-  // nay_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
-  //       console.log(eventData); //clears timeout
-  //   });
-
-  // // SO_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
-  // //       console.log(eventData); //clears timeout
-  // //   });
-
-  // JP_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
-  //       console.log(eventData); //clears timeout
-  //   });
-
-  // sub_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
-  //       console.log(eventData); //clears timeout
-  //   });
-
-  // riz_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
-  //       console.log(eventData); //clears timeout
-  //   });
 
   // assign"zIndex"s to faces
   $('#face1').css("zIndex",1);
@@ -671,22 +629,6 @@ window.onload = function() {
 
   var w = $(window).width();
   var h = $(window).height();
-
-// $('#face1').offset().left = face1x;
-// $('#face1').offset().top = face1y;
-
-// $('#face2').offset().left = face2x;
-// $('#face2').offset().top = face2y;
-
-// $('#face3').offset().left = face3x;
-// $('#face3').offset().top = face3y;
-
-// $('#face4').offset().left = face4x;
-// $('#face4').offset().top = face4y;
-
-// $('#face5').offset().left = face5x;
-// $('#face5').offset().top = face5y;
-
 
   $('#face1').css('transform', "translate(" + face1x*w + "px," + face1y*h + "px)");
   $('#face2').css('transform', "translate(" + face2x*w + "px," + face2y*h + "px)");
