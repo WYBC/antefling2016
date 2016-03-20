@@ -122,8 +122,8 @@ var face5_object = interact('#face5').draggable({
     // var x_offset = event.pageX - $('#face4').offset().left;
     // var y_offset = event.pageY - $('#face4').offset().top;
 
-    // console.log(x_offset);
-    // console.log(y_offset);
+    // console.log(event.target.getAttribute('data-x'));
+    // console.log(event.target.getAttribute('data-y'));
 
     var target = event.target,
         // keep the dragged position in the data-x/data-y attributes
@@ -408,9 +408,52 @@ function promote(element, interactible, event){
 //   var e = jQuery.Event( "mousedown", { pageX: x_coord, pageY: y_coord } );
 // $('#canvas_element').trigger(e);
 
+// var nay_widget;
+// var SO_widget;
+// var JP_widget;
+// var sub_widget;
+// var riz_widget;
+
 window.onload = function() {
   // code to handle page loading
-  // TODO
+  // TODO: wait to allow entrance until after loading
+  // TODO: flashing dots
+  // TODO: positioning
+  // TODO: youtube?
+
+  // nay_widget         = SC.Widget("nay-iframe");
+  // SO_widget         = SC.Widget("SO-iframe");
+  // JP_widget         = SC.Widget("JP-iframe");
+  // sub_widget         = SC.Widget("99-iframe");
+  // riz_widget         = SC.Widget("riz-iframe");
+
+  // nay_widget_loaded = false;         
+  // SO_widget_loaded = false;         
+  // JP_widget_loaded = false;         
+  // sub_widget_loaded = false;         
+  // riz_widget_loaded = false;         
+
+  // TODO: bind to loading events for smoother playback effect
+
+  // nay_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
+  //       console.log(eventData); //clears timeout
+  //   });
+
+  // // SO_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
+  // //       console.log(eventData); //clears timeout
+  // //   });
+
+  // JP_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
+  //       console.log(eventData); //clears timeout
+  //   });
+
+  // sub_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
+  //       console.log(eventData); //clears timeout
+  //   });
+
+  // riz_widget.bind(SC.Widget.Events.LOAD_PROGRESS, function(eventData) {
+  //       console.log(eventData); //clears timeout
+  //   });
 
   // assign"zIndex"s to faces
   $('#face1').css("zIndex",1);
@@ -419,19 +462,98 @@ window.onload = function() {
   $('#face4').css("zIndex",4);
   $('#face5').css("zIndex",2);
   listAllZ();
+
+  var face1x = 300.0 / 1036.0, face1y = 420.0 / 701.0;
+  var face2x = 250.0 / 1036.0, face2y = 200.0 / 701.0;
+  var face3x = 360.0 / 1036.0, face3y = 220.0 / 701.0;
+  var face4x = 190.0 / 1036.0, face4y = 130.0 / 701.0;
+  var face5x = 380.0 / 1036.0, face5y = 35.0 / 701.0;
+
+  var w = $(window).width();
+  var h = $(window).height();
+
+// $('#face1').offset().left = face1x;
+// $('#face1').offset().top = face1y;
+
+// $('#face2').offset().left = face2x;
+// $('#face2').offset().top = face2y;
+
+// $('#face3').offset().left = face3x;
+// $('#face3').offset().top = face3y;
+
+// $('#face4').offset().left = face4x;
+// $('#face4').offset().top = face4y;
+
+// $('#face5').offset().left = face5x;
+// $('#face5').offset().top = face5y;
+
+
+  $('#face1').css('transform', "translate(" + face1x*w + "px," + face1y*h + "px)");
+  $('#face2').css('transform', "translate(" + face2x*w + "px," + face2y*h + "px)");
+  $('#face3').css('transform', "translate(" + face3x*w + "px," + face3y*h + "px)");
+  $('#face4').css('transform', "translate(" + face4x*w + "px," + face4y*h + "px)");
+  $('#face5').css('transform', "translate(" + face5x*w + "px," + face5y*h + "px)");
+
+  document.querySelector("#face1").setAttribute('data-x', $('#face1').offset().left);
+  document.querySelector("#face1").setAttribute('data-y', $('#face1').offset().top);
+
+  document.querySelector("#face2").setAttribute('data-x', $('#face2').offset().left);
+  document.querySelector("#face2").setAttribute('data-y', $('#face2').offset().top);
+
+  document.querySelector("#face3").setAttribute('data-x', $('#face3').offset().left);
+  document.querySelector("#face3").setAttribute('data-y', $('#face3').offset().top);
+
+  document.querySelector("#face4").setAttribute('data-x', $('#face4').offset().left);
+  document.querySelector("#face4").setAttribute('data-y', $('#face4').offset().top);
+
+  document.querySelector("#face5").setAttribute('data-x', $('#face5').offset().left);
+  document.querySelector("#face5").setAttribute('data-y', $('#face5').offset().top);
+
+  console.log("DONE ONLOAD");
+  // console.log("translate(" + face1x / winX + "%," + face1y / winY + "%)");
 };
 
-$("#face1").on("mousedown", checkBoundsFace1);
-$("#face2").on("mousedown", checkBoundsFace2);
-$("#face3").on("mousedown", checkBoundsFace3);
-$("#face4").on("mousedown", checkBoundsFace4);
-$("#face5").on("mousedown", checkBoundsFace5);
+// $("#face1").on("mousedown", checkBoundsFace1);
+// $("#face2").on("mousedown", checkBoundsFace2);
+// $("#face3").on("mousedown", checkBoundsFace3);
+// $("#face4").on("mousedown", checkBoundsFace4);
+// $("#face5").on("mousedown", checkBoundsFace5);
+
+// function playNow(widget){
+
+//   fadeOut(nay_widget);
+//   // fadeOut(SO_widget);
+//   fadeOut(JP_widget);
+//   fadeOut(sub_widget);
+//   fadeOut(riz_widget);
+
+//   fadeIn(widget);
+// }
+
+// function fadeOut(widget){
+//   for (var i = 100; i >= 0; i--) {
+//     // console.log(i);
+//     setTimeout(function(){ widget.setVolume(i/100); }, 100);
+//   };
+//   // setTimeout(function(){ widget.pause(); }, 10000);
+//   widget.pause();
+// }
+
+// function fadeIn(widget){
+//   widget.setVolume(0);
+//   widget.play();
+//   for (var i = 0; i <= 100; i++) {
+//     // console.log(i);
+//     setTimeout(function(){ widget.setVolume(i/100); }, 100);
+//   };
+// }
 
 // could use visibility and css transitions
 // http://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/
 
 interact('.welcome').on('doubletap', function (event) {
     $(".welcome").css("zIndex",-10).css("visibility","hidden");
+    $(".enter").css("zIndex",-10).css("visibility","hidden");
   })
 
 interact('.overlay').on('doubletap', function (event) {
@@ -442,24 +564,189 @@ interact('.overlay').on('doubletap', function (event) {
 face1_object.on('doubletap', function (event) {
     $("#nay-overlay").css("zIndex",10).css("visibility","visible");
     $("#nay-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    SO_player.pauseVideo();
+    JP_player.pauseVideo();
+    nay_player.pauseVideo();
+    sub_player.pauseVideo();
+    riz_player.pauseVideo();
+
+    nay_player.playVideo();
+
+    // playNow(nay_widget);
   })
 
 face2_object.on('doubletap', function (event) {
     $("#SO-overlay").css("zIndex",10).css("visibility","visible");
     $("#SO-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    SO_player.pauseVideo();
+    JP_player.pauseVideo();
+    nay_player.pauseVideo();
+    sub_player.pauseVideo();
+    riz_player.pauseVideo();
+
+    SO_player.playVideo();
+
+    // playNow(SO_widget);
   })
 
 face3_object.on('doubletap', function (event) {
     $("#JP-overlay").css("zIndex",10).css("visibility","visible");
     $("#JP-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    SO_player.pauseVideo();
+    JP_player.pauseVideo();
+    nay_player.pauseVideo();
+    sub_player.pauseVideo();
+    riz_player.pauseVideo();
+
+    JP_player.playVideo();
+
+    // playNow(JP_widget);
   })
 
 face4_object.on('doubletap', function (event) {
     $("#99-overlay").css("zIndex",10).css("visibility","visible");
     $("#99-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    SO_player.pauseVideo();
+    JP_player.pauseVideo();
+    nay_player.pauseVideo();
+    sub_player.pauseVideo();
+    riz_player.pauseVideo();
+
+    sub_player.playVideo();
+
+    // playNow(sub_widget);
   })
 
 face5_object.on('doubletap', function (event) {
     $("#riz-overlay").css("zIndex",10).css("visibility","visible");
     $("#riz-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    SO_player.pauseVideo();
+    JP_player.pauseVideo();
+    nay_player.pauseVideo();
+    sub_player.pauseVideo();
+    riz_player.pauseVideo();
+
+    riz_player.playVideo();
+
+    // playNow(riz_widget);
   })
+
+
+
+///////////// youtube
+  var votes = 0;
+  var fullyready = false;
+
+  function voteReady(){
+    votes++;
+    if (votes >= 5) {
+      fullyready = true;
+      $( ".enter" ).css("visibility","visible");
+    };
+    console.log(votes);
+  }
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var SO_player;
+      var JP_player;
+      var nay_player;
+      var sub_player;
+      var riz_player;
+      function onYouTubeIframeAPIReady() {
+        SO_player = new YT.Player('SO-player', {
+          videoId: 'YMxKdyjpRq4',
+          playerVars: { 'controls': 0 },
+          events: {
+            'onReady': SO_onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+
+        nay_player = new YT.Player('nay-player', {
+          videoId: '_z216oK-sb4',
+          playerVars: { 'controls': 0 },
+          events: {
+            'onReady': nay_onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+
+        JP_player = new YT.Player('JP-player', {
+          videoId: 'AtwVdabW0GE',
+          playerVars: { 'controls': 0 },
+          events: {
+            'onReady': JP_onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+
+        riz_player = new YT.Player('riz-player', {
+          videoId: 'n9Tc-bflp00',
+          playerVars: { 'controls': 0 },
+          events: {
+            'onReady': riz_onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+
+        sub_player = new YT.Player('sub-player', {
+          videoId: 'kIPQpWVZXNU',
+          playerVars: { 'controls': 0 },
+          events: {
+            'onReady': sub_onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+      // 4.a. handle individual specialties
+      function SO_onPlayerReady(event) {
+        onPlayerReady(event);
+        event.target.seekTo(270);
+      }
+      function JP_onPlayerReady(event) {
+        onPlayerReady(event);
+        event.target.seekTo(54);
+      }
+      function nay_onPlayerReady(event) {
+        onPlayerReady(event);
+        event.target.seekTo(0);
+      }
+      function riz_onPlayerReady(event) {
+        onPlayerReady(event);
+        event.target.seekTo(3590);
+      }
+      function sub_onPlayerReady(event) {
+        onPlayerReady(event);
+        event.target.seekTo(21);
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.setVolume(100);
+        voteReady();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          // setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      // function stopVideo() {
+      //   player.stopVideo();
+      // }

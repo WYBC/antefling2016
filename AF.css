@@ -24,24 +24,11 @@ a:active {
     font-weight: underline;
     color: #fffff2;
 }
-.button {
-	position: absolute;
-	background-color: none;
-	z-index: 0;
-	color: white;
-	font-size: 30px;
-	text-align: center;
-	line-height: 15.0px;
-	width: auto;
-	height: auto;
-}
-#button_Enter{
-	left: 50%;
-	bottom: 20px;
-	transform: translate(-50%,-50%);
-}
 img{
-	position: relative;
+	position: fixed;
+
+	top:0;
+	left:0;
 
 	width: 100%;
 	height: auto;
@@ -60,42 +47,42 @@ body{
 	/*position: absolute;*/
 	background-size: contain;
 
-  -webkit-shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
+/*  -webkit-shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
   shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
-  -webkit-clip-path: polygon(0 0,24 166,530 54,518 0,0 0);
+  -webkit-clip-path: polygon(0 0,24 166,530 54,518 0,0 0);*/
 	
 /*  -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);*/
 }
 #face1{
 	width: 440px;
-/*
-	  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);*/
+	/*left: 20%;*/
+	/*top: 75%;*/
+	/*transform: translate(341px, -159px);*/
 }
 #face2{
 	width: 290px;
-/*
-	  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);*/
+	/*left: 20%;*/
+	/*top: 30%;*/
+	/*transform: translate(-152px, -283px);*/
 }
 #face3{
 	width: 350px;
-/*
-	  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);*/
+	/*left: 20%;*/
+	/*top: 30%;*/
+	/*transform: translate(-325px, -297px);*/
 }
 #face4{
 	width: 530px;
-/*
-	  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);*/
+	/*left: 20%;*/
+	/*top: 10%;*/
+	/*transform: translate(262px, -575px);*/
 }
 #face5{
 	width: 450px;
-/*
-	  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);*/
+	/*left: 20%;*/
+	/*top: 20%;*/
+	/*transform: translate(-136px, -714px);*/
 }
 
 #face1:hover{
@@ -134,9 +121,13 @@ body{
     height: 100%;
     z-index: -10;
     background-color: #000000;
-    opacity: 0.7;
+    opacity: 0.35;
     filter: alpha(opacity=70);
     visibility: hidden;
+}
+
+#back-shadow{
+	opacity: 0.75;
 }
 
 .bio{
@@ -152,8 +143,10 @@ body{
 }
 
 iframe{
+	height: 100%;
 	width: 100%;
 	border: 0;
+	bottom: 0px;
 }
 
 .welcome{
@@ -165,4 +158,30 @@ iframe{
 	z-index: 100;
 	background-color: #000000;
 	/*visibility: hidden;*/
+}
+
+li{
+	list-style-type: none;
+}
+
+.main{
+	color: white;
+	margin: auto;
+/*	border-style: dotted;
+	border-color: white;*/
+	padding-top: 10%;
+}
+
+.column{
+	border-style: dotted;
+	border-color: black;
+}
+
+.columns{
+	border-style: dotted;
+	border-color: black;
+}
+
+.enter{
+	visibility: hidden;
 }
