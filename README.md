@@ -2,34 +2,34 @@
 
 ## YOUTUBE content
 
-### TODO: make player not all play at beginning
-### TODO: force buffering to stay
-### TODO: cases where loading fails
-### TODO: fade in/out
+make player not all play at beginning
+force buffering to stay
+cases where loading fails
+fade in/out
 
 ## landing screen
 
-### TODO: handle loading errors
-### TODO: disable doubleclick before loaded
-### TODO: flashing lights
+handle loading errors
+disable doubleclick before loaded
+flashing lights
 
 ## faces/responsivity
 
-### TODO: adjust resize rules
-### TODO: mobile
-### TODO: fire-through on pointer event miss
+adjust resize rules
+mobile
+fire-through on pointer event miss
 
 ## Content
 
-### add bios
-### styling/fonts
-### add links
+add bios
+styling/fonts
+add links
 
 ## Other
 
-### add css transitions for fade
-### add hit counter
-### browser compatibility mode
-### TODO: comments and clean up code
-### verify with artists
-### server routes (Currently: https://wybc.com/antefling2016/AF.html)
+add css transitions for fade
+add hit counter
+browser compatibility mode
+comments and clean up code
+verify with artists
+server routes (Currently: https://wybc.com/antefling2016/AF.html)
