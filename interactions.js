@@ -562,6 +562,8 @@ interact('.overlay').on('doubletap', function (event) {
   })
 
 face1_object.on('doubletap', function (event) {
+    interact.stop();
+
     $("#nay-overlay").css("zIndex",10).css("visibility","visible");
     $("#nay-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
@@ -578,6 +580,8 @@ face1_object.on('doubletap', function (event) {
   })
 
 face2_object.on('doubletap', function (event) {
+    interact.stop();
+
     $("#SO-overlay").css("zIndex",10).css("visibility","visible");
     $("#SO-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
@@ -594,6 +598,8 @@ face2_object.on('doubletap', function (event) {
   })
 
 face3_object.on('doubletap', function (event) {
+    interact.stop();
+
     $("#JP-overlay").css("zIndex",10).css("visibility","visible");
     $("#JP-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
@@ -610,6 +616,8 @@ face3_object.on('doubletap', function (event) {
   })
 
 face4_object.on('doubletap', function (event) {
+    interact.stop();
+
     $("#99-overlay").css("zIndex",10).css("visibility","visible");
     $("#99-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
@@ -626,6 +634,8 @@ face4_object.on('doubletap', function (event) {
   })
 
 face5_object.on('doubletap', function (event) {
+    interact.stop();
+
     $("#riz-overlay").css("zIndex",10).css("visibility","visible");
     $("#riz-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
@@ -750,3 +760,14 @@ face5_object.on('doubletap', function (event) {
       // function stopVideo() {
       //   player.stopVideo();
       // }
+
+
+
+
+
+
+
+
+
+
+
