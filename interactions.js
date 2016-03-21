@@ -1,27 +1,3 @@
-// target elements with the "draggable" class
-// var pic = interact('.draggable');
-
-// pic.draggable({
-//     max: 5,
-//     manualStart: false,                      // will not work b/c you need to make a new listener [use no_handle]
-//     // enable inertial throwing
-//     inertia: false,
-//     // keep the element within the area of it's parent
-//     restrict: {
-//       restriction: "parent",
-//       endOnly: true,
-//       elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
-//     },
-
-//     onstart: function (event) {},// fade in?
-//     // call this function on every dragmove event
-//     onmove: dragMoveListener,
-//     // call this function on every dragend event
-//     onend: function (event) {} // fade out?
-//   });
-
-
-
 var face1_object = interact('#face1').draggable({
     max: 5,
     manualStart: false,                      // will not work b/c you need to make a new listener [use no_handle]
@@ -393,6 +369,22 @@ function promote(element, interactible, event){
     listAllZ();
 }
 
+function updatePlayTime() {
+      SO_time = SO_player.getCurrentTime();
+      JP_time = JP_player.getCurrentTime();
+      nay_time = nay_player.getCurrentTime();
+      sub_time = sub_player.getCurrentTime();
+      riz_time = riz_player.getCurrentTime();
+}
+
+function pauseAll() {
+    SO_player.pauseVideo();
+    JP_player.pauseVideo();
+    nay_player.pauseVideo();
+    sub_player.pauseVideo();
+    riz_player.pauseVideo();
+}
+
 interact('.welcome').on('doubletap', function (event) {
     $(".welcome").css("zIndex",-10).css("visibility","hidden");
     $(".enter").css("zIndex",-10).css("visibility","hidden");
@@ -410,15 +402,11 @@ face1_object.on('doubletap', function (event) {
     $("#nay-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    SO_player.pauseVideo();
-    JP_player.pauseVideo();
-    nay_player.pauseVideo();
-    sub_player.pauseVideo();
-    riz_player.pauseVideo();
+    updatePlayTime();
+    pauseAll();
 
+    nay_player.seekTo(nay_time_start);
     nay_player.playVideo();
-
-    // playNow(nay_widget);
   })
 
 face2_object.on('doubletap', function (event) {
@@ -428,15 +416,11 @@ face2_object.on('doubletap', function (event) {
     $("#SO-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    SO_player.pauseVideo();
-    JP_player.pauseVideo();
-    nay_player.pauseVideo();
-    sub_player.pauseVideo();
-    riz_player.pauseVideo();
+    updatePlayTime();
+    pauseAll();
 
+    SO_player.seekTo(SO_time_start);
     SO_player.playVideo();
-
-    // playNow(SO_widget);
   })
 
 face3_object.on('doubletap', function (event) {
@@ -446,15 +430,11 @@ face3_object.on('doubletap', function (event) {
     $("#JP-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    SO_player.pauseVideo();
-    JP_player.pauseVideo();
-    nay_player.pauseVideo();
-    sub_player.pauseVideo();
-    riz_player.pauseVideo();
+    updatePlayTime();
+    pauseAll();
 
+    JP_player.seekTo(JP_time_start);
     JP_player.playVideo();
-
-    // playNow(JP_widget);
   })
 
 face4_object.on('doubletap', function (event) {
@@ -464,15 +444,11 @@ face4_object.on('doubletap', function (event) {
     $("#99-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    SO_player.pauseVideo();
-    JP_player.pauseVideo();
-    nay_player.pauseVideo();
-    sub_player.pauseVideo();
-    riz_player.pauseVideo();
+    updatePlayTime();
+    pauseAll();
 
+    sub_player.seekTo(sub_time_start);
     sub_player.playVideo();
-
-    // playNow(sub_widget);
   })
 
 face5_object.on('doubletap', function (event) {
@@ -482,15 +458,11 @@ face5_object.on('doubletap', function (event) {
     $("#riz-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    SO_player.pauseVideo();
-    JP_player.pauseVideo();
-    nay_player.pauseVideo();
-    sub_player.pauseVideo();
-    riz_player.pauseVideo();
+    updatePlayTime();
+    pauseAll();
 
+    riz_player.seekTo(riz_time_start);
     riz_player.playVideo();
-
-    // playNow(riz_widget);
   })
 
 
@@ -522,6 +494,20 @@ face5_object.on('doubletap', function (event) {
       var nay_player;
       var sub_player;
       var riz_player;
+
+      // set start times
+      var SO_time_start = 270;
+      var JP_time_start = 54;
+      var nay_time_start = 0;
+      var sub_time_start = 21;
+      var riz_time_start = 3590;
+
+      var SO_time = SO_time_start;
+      var JP_time = JP_time_start;
+      var nay_time = nay_time_start;
+      var sub_time = sub_time_start;
+      var riz_time = riz_time_start;
+
       function onYouTubeIframeAPIReady() {
         SO_player = new YT.Player('SO-player', {
           videoId: 'YMxKdyjpRq4',
@@ -571,23 +557,28 @@ face5_object.on('doubletap', function (event) {
       // 4.a. handle individual specialties
       function SO_onPlayerReady(event) {
         onPlayerReady(event);
-        event.target.seekTo(270);
+        event.target.seekTo(SO_time_start);
+        event.target.pauseVideo();
       }
       function JP_onPlayerReady(event) {
         onPlayerReady(event);
-        event.target.seekTo(54);
+        event.target.seekTo(JP_time_start);
+        event.target.pauseVideo();
       }
       function nay_onPlayerReady(event) {
         onPlayerReady(event);
-        event.target.seekTo(0);
+        event.target.seekTo(nay_time_start);
+        event.target.pauseVideo();
       }
       function riz_onPlayerReady(event) {
         onPlayerReady(event);
-        event.target.seekTo(3590);
+        event.target.seekTo(riz_time_start);
+        event.target.pauseVideo();
       }
       function sub_onPlayerReady(event) {
         onPlayerReady(event);
-        event.target.seekTo(21);
+        event.target.seekTo(sub_time_start);
+        event.target.pauseVideo();
       }
 
       // 4. The API will call this function when the video player is ready.
@@ -601,9 +592,35 @@ face5_object.on('doubletap', function (event) {
       //    the player should play for six seconds and then stop.
       var done = false;
       function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          // setTimeout(stopVideo, 6000);
-          done = true;
+        if (event.data == YT.PlayerState.ENDED && event.target === sub_player) {
+          event.target.seekTo(sub_time_start);
+          sub_time = sub_time_start;
+          event.target.pauseVideo();
+          console.log("replay");
+        }
+        if (event.data == YT.PlayerState.ENDED && event.target === riz_player) {
+          event.target.seekTo(riz_time_start);
+          riz_time = riz_time_start;
+          event.target.pauseVideo();
+          console.log("replay");
+        }
+        if (event.data == YT.PlayerState.ENDED && event.target === SO_player) {
+          event.target.seekTo(SO_time_start);
+          SO_time = SO_time_start;
+          event.target.pauseVideo();
+          console.log("replay");
+        }
+        if (event.data == YT.PlayerState.ENDED && event.target === JP_player) {
+          event.target.seekTo(JP_time_start);
+          JP_time = JP_time_start;
+          event.target.pauseVideo();
+          console.log("replay");
+        }
+        if (event.data == YT.PlayerState.ENDED && event.target === nay_player) {
+          event.target.seekTo(nay_time_start);
+          nay_time = nay_time_start;
+          event.target.pauseVideo();
+          console.log("replay");
         }
       }
       // function stopVideo() {

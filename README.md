@@ -2,10 +2,11 @@
 
 ## YOUTUBE content
 
-- make player not all play at beginning
+<!-- - make player not all play at beginning -->
 - force buffering to stay
 - cases where loading fails
 - fade in/out
+- deal with end of video
 
 ## landing screen
 
@@ -33,3 +34,4 @@
 - comments and clean up code
 - verify with artists
 - server routes (Currently: https://wybc.com/antefling2016/AF.html)
+- favicon
