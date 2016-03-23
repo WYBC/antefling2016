@@ -374,15 +374,24 @@ function updatePlayTime() {
       JP_time = JP_player.getCurrentTime();
       nay_time = nay_player.getCurrentTime();
       sub_time = sub_player.getCurrentTime();
-      riz_time = riz_player.getCurrentTime();
+      // riz_time = riz_player.getCurrentTime();
+
+      console.log("times")
+      console.log(SO_time);
+      console.log(JP_time);
+      console.log(nay_time);
+      console.log(sub_time);
 }
 
 function pauseAll() {
+    // youtube
     SO_player.pauseVideo();
     JP_player.pauseVideo();
     nay_player.pauseVideo();
     sub_player.pauseVideo();
-    riz_player.pauseVideo();
+
+    // soundcloud
+    riz_player.pause();
 }
 
 interact('.welcome').on('doubletap', function (event) {
@@ -419,7 +428,7 @@ face2_object.on('doubletap', function (event) {
     updatePlayTime();
     pauseAll();
 
-    SO_player.seekTo(SO_time_start);
+    SO_player.seekTo(SO_time);
     SO_player.playVideo();
   })
 
@@ -433,7 +442,7 @@ face3_object.on('doubletap', function (event) {
     updatePlayTime();
     pauseAll();
 
-    JP_player.seekTo(JP_time_start);
+    JP_player.seekTo(JP_time);
     JP_player.playVideo();
   })
 
@@ -447,7 +456,7 @@ face4_object.on('doubletap', function (event) {
     updatePlayTime();
     pauseAll();
 
-    sub_player.seekTo(sub_time_start);
+    sub_player.seekTo(sub_time);
     sub_player.playVideo();
   })
 
@@ -461,10 +470,14 @@ face5_object.on('doubletap', function (event) {
     updatePlayTime();
     pauseAll();
 
-    riz_player.seekTo(riz_time_start);
-    riz_player.playVideo();
+    // riz_player.seekTo(riz_time_start);
+    riz_player.play();
   })
 
+///////////// soundcloud
+
+var iframeElement   = document.querySelector('#riziframe');
+var riz_player      = SC.Widget(iframeElement);
 
 
 ///////////// youtube
@@ -473,9 +486,12 @@ face5_object.on('doubletap', function (event) {
 
   function voteReady(){
     votes++;
-    if (votes >= 5) {
+    if (votes >= 4) {
       fullyready = true;
-      $( ".enter" ).css("visibility","visible");
+      $( ".enter" ).css("display","inline-block");
+      $( "#dot1" ).css("display","none");
+      $( "#dot2" ).css("display","none");
+      $( "#dot3" ).css("display","none");
     };
     console.log(votes);
   }
@@ -493,20 +509,20 @@ face5_object.on('doubletap', function (event) {
       var JP_player;
       var nay_player;
       var sub_player;
-      var riz_player;
+      // var riz_player;
 
       // set start times
       var SO_time_start = 270;
       var JP_time_start = 54;
       var nay_time_start = 0;
       var sub_time_start = 21;
-      var riz_time_start = 3590;
+      // var riz_time_start = 3590;
 
       var SO_time = SO_time_start;
       var JP_time = JP_time_start;
       var nay_time = nay_time_start;
       var sub_time = sub_time_start;
-      var riz_time = riz_time_start;
+      // var riz_time = riz_time_start;
 
       function onYouTubeIframeAPIReady() {
         SO_player = new YT.Player('SO-player', {
@@ -536,14 +552,14 @@ face5_object.on('doubletap', function (event) {
           }
         });
 
-        riz_player = new YT.Player('riz-player', {
-          videoId: 'n9Tc-bflp00',
-          playerVars: { 'controls': 0 },
-          events: {
-            'onReady': riz_onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
+        // riz_player = new YT.Player('riz-player', {
+        //   videoId: 'n9Tc-bflp00',
+        //   playerVars: { 'controls': 0 },
+        //   events: {
+        //     'onReady': riz_onPlayerReady,
+        //     'onStateChange': onPlayerStateChange
+        //   }
+        // });
 
         sub_player = new YT.Player('sub-player', {
           videoId: 'kIPQpWVZXNU',
@@ -570,11 +586,11 @@ face5_object.on('doubletap', function (event) {
         event.target.seekTo(nay_time_start);
         event.target.pauseVideo();
       }
-      function riz_onPlayerReady(event) {
-        onPlayerReady(event);
-        event.target.seekTo(riz_time_start);
-        event.target.pauseVideo();
-      }
+      // function riz_onPlayerReady(event) {
+      //   onPlayerReady(event);
+      //   event.target.seekTo(riz_time_start);
+      //   event.target.pauseVideo();
+      // }
       function sub_onPlayerReady(event) {
         onPlayerReady(event);
         event.target.seekTo(sub_time_start);
@@ -598,12 +614,12 @@ face5_object.on('doubletap', function (event) {
           event.target.pauseVideo();
           console.log("replay");
         }
-        if (event.data == YT.PlayerState.ENDED && event.target === riz_player) {
-          event.target.seekTo(riz_time_start);
-          riz_time = riz_time_start;
-          event.target.pauseVideo();
-          console.log("replay");
-        }
+        // if (event.data == YT.PlayerState.ENDED && event.target === riz_player) {
+        //   event.target.seekTo(riz_time_start);
+        //   riz_time = riz_time_start;
+        //   event.target.pauseVideo();
+        //   console.log("replay");
+        // }
         if (event.data == YT.PlayerState.ENDED && event.target === SO_player) {
           event.target.seekTo(SO_time_start);
           SO_time = SO_time_start;
@@ -671,8 +687,6 @@ window.onload = function() {
   console.log("DONE ONLOAD");
   // console.log("translate(" + face1x / winX + "%," + face1y / winY + "%)");
 };
-
-
 
 
 

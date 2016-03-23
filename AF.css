@@ -4,13 +4,13 @@ body{
 a:link {
     text-decoration: none;
     font-weight: lighter;
-    color: white;
+    color: #73D5EE;
 }
 
 a:visited {
     text-decoration: none;
     font-weight: normal;
-    color: white;
+    color: gray;
 }
 
 a:hover {
@@ -111,6 +111,7 @@ body{
     z-index: -10;
     opacity: 1;
     visibility: hidden;
+    overflow-y:scroll;
 }
 
 .shadow {
@@ -132,8 +133,9 @@ body{
 
 .bio{
 	position: relative;
-	width: 80%;
+	width: 90%;
 	opacity: 1;
+	overflow-y:scroll;
 }
 .sample{
 	position: relative;
@@ -175,13 +177,124 @@ li{
 .column{
 	border-style: dotted;
 	border-color: black;
+	overflow-y:scroll;
 }
 
 .columns{
 	border-style: dotted;
 	border-color: black;
+	overflow-y:scroll;
+}
+
+.row{
+	overflow-y:scroll;
 }
 
 .enter{
-	visibility: hidden;
+	display: none;
+}
+
+#dot1 {
+  -moz-animation: flashOne 0.75s;
+  -moz-animation-iteration-count: infinite;
+
+  -webkit-animation: flashOne 0.75s;
+  -webkit-animation-iteration-count: infinite;
+
+  -ms-animation: flashOne 0.75s;
+  -ms-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flashOne {
+    0% { opacity: 0; }
+    25% { opacity: 0.5; }
+    50% { opacity: 1; }
+    75% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes flashOne {
+    0% { opacity: 0; }
+    25% { opacity: 0.5; }
+    50% { opacity: 1; }
+    75% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+@-ms-keyframes flashOne {
+    0% { opacity: 0; }
+    25% { opacity: 0.5; }
+    50% { opacity: 1; }
+    75% { opacity: 0.5; }
+    100% { opacity: 0; }
+}
+
+#dot2 {
+  -moz-animation: flashTwo 0.75s;
+  -moz-animation-iteration-count: infinite;
+
+  -webkit-animation: flashTwo 0.75s;
+  -webkit-animation-iteration-count: infinite;
+
+  -ms-animation: flashTwo 0.75s;
+  -ms-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flashTwo {
+    0% { opacity: 0.5; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+    75% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@-moz-keyframes flashTwo {
+    0% { opacity: 0.5; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+    75% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@-ms-keyframes flashTwo {
+    0% { opacity: 0.5; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+    75% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+#dot3 {
+  -moz-animation: flashThree 0.75s;
+  -moz-animation-iteration-count: infinite;
+
+  -webkit-animation: flashThree 0.75s;
+  -webkit-animation-iteration-count: infinite;
+
+  -ms-animation: flashThree 0.75s;
+  -ms-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flashThree {
+    0% { opacity: 1; }
+    25% { opacity: 0.5; }
+    50% { opacity: 0; }
+    75% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes flashThree {
+    0% { opacity: 1; }
+    25% { opacity: 0.5; }
+    50% { opacity: 0; }
+    75% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@-ms-keyframes flashThree {
+    0% { opacity: 1; }
+    25% { opacity: 0.5; }
+    50% { opacity: 0; }
+    75% { opacity: 0.5; }
+    100% { opacity: 1; }
 }

@@ -7,22 +7,26 @@
 - cases where loading fails
 - fade in/out
 - deal with end of video
+- save video playback position
+- change rizzla to soundcloud
+- enforce endtime on some vids
 
 ## landing screen
 
 - handle loading errors
 - disable doubleclick before loaded
-- flashing lights
+<!-- - flashing lights -->
 
 ## faces/responsivity
 
-- adjust resize rules
+<!-- - adjust resize rules -->
 - mobile
 - fire-through on pointer event miss
 
 ## Content
 
-- add bios
+<!-- - add bios -->
+<!-- - make bios scrollable -->
 - styling/fonts
 - add links
 
