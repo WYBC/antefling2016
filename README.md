@@ -6,10 +6,17 @@
 - force buffering to stay
 - cases where loading fails
 - fade in/out
-- deal with end of video
-- save video playback position
-- change rizzla to soundcloud
+<!-- - deal with end of video -->
+<!-- - save video playback position -->
+<!-- - change rizzla to soundcloud -->
 - enforce endtime on some vids
+
+## Soundcloud
+
+- end?
+- fade?
+- loading?
+- seek  /  time
 
 ## landing screen
 

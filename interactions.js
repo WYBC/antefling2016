@@ -402,6 +402,7 @@ interact('.welcome').on('doubletap', function (event) {
 interact('.overlay').on('doubletap', function (event) {
     $(".overlay").css("zIndex",-10).css("visibility","hidden");
     $(".shadow").css("zIndex",-10).css("visibility","hidden");
+    // TODO: push back-shadow back here?
   })
 
 face1_object.on('doubletap', function (event) {
@@ -473,12 +474,6 @@ face5_object.on('doubletap', function (event) {
     // riz_player.seekTo(riz_time_start);
     riz_player.play();
   })
-
-///////////// soundcloud
-
-var iframeElement   = document.querySelector('#riziframe');
-var riz_player      = SC.Widget(iframeElement);
-
 
 ///////////// youtube
   var votes = 0;
@@ -643,8 +638,16 @@ var riz_player      = SC.Widget(iframeElement);
       //   player.stopVideo();
       // }
 
+var riz_player;
+
+// code to handle page loading
 window.onload = function() {
-  // code to handle page loading
+
+  ///////////// soundcloud init
+
+  console.log(document.querySelector("#riziframe"))
+  var iframeElement   = document.querySelector("#riziframe");
+  riz_player      = SC.Widget(iframeElement);
 
   // assign"zIndex"s to faces
   $('#face1').css("zIndex",1);

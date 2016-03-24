@@ -112,6 +112,12 @@ body{
     opacity: 1;
     visibility: hidden;
     overflow-y:scroll;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    webkit-transition: opacity 1s ease-in-out; /* Safari */
+    transition: opacity 1s ease-in-out;
 }
 
 .shadow {
@@ -125,10 +131,22 @@ body{
     opacity: 0.35;
     filter: alpha(opacity=70);
     visibility: hidden;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    webkit-transition: opacity 1s ease-in-out; /* Safari */
+    transition: opacity 1s ease-in-out;
 }
 
 #back-shadow{
 	opacity: 0.75;
+	-moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    webkit-transition: opacity 1s ease-in-out; /* Safari */
+    transition: opacity 1s ease-in-out;
 }
 
 .bio{
@@ -172,6 +190,12 @@ li{
 /*	border-style: dotted;
 	border-color: white;*/
 	padding-top: 10%;
+	-moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    webkit-transition: opacity 1s ease-in-out; /* Safari */
+    transition: opacity 1s ease-in-out;
 }
 
 .column{
@@ -192,6 +216,12 @@ li{
 
 .enter{
 	display: none;
+	-moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    webkit-transition: opacity 1s ease-in-out; /* Safari */
+    transition: opacity 1s ease-in-out;
 }
 
 #dot1 {
