@@ -394,23 +394,31 @@ function pauseAll() {
     riz_player.pause();
 }
 
-interact('.welcome').on('doubletap', function (event) {
-    $(".welcome").css("zIndex",-10).css("visibility","hidden");
-    $(".enter").css("zIndex",-10).css("visibility","hidden");
+interact('.welcome').on('tap', function (event) {
+    // $(".welcome").fadeOut(10000, $(".welcome").css("zIndex",-10).css("visibility","hidden"));
+    // $(".enter").fadeOut(10000, $(".enter").css("zIndex",-10).css("visibility","hidden"));
+
+    $('.welcome').fadeOut();
   })
 
-interact('.overlay').on('doubletap', function (event) {
-    $(".overlay").css("zIndex",-10).css("visibility","hidden");
-    $(".shadow").css("zIndex",-10).css("visibility","hidden");
-    // TODO: push back-shadow back here?
+interact('.overlay').on('tap', function (event) {
+    $('.overlay').fadeOut();
+    $(".shadow").fadeOut();
+
+    // $(".overlay").css("zIndex",-10).css("visibility","hidden");
+    // $(".shadow").css("zIndex",-10).css("visibility","hidden");
   })
 
-face1_object.on('doubletap', function (event) {
+face1_object.on('tap', function (event) {
     interact.stop();
 
     $("#nay-overlay").css("zIndex",10).css("visibility","visible");
     $("#nay-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    $("#nay-overlay").fadeTo(400, 1);
+    $("#nay-shadow").fadeTo(400, 0.35);
+    $("#nay-overlay").fadeTo(400, 0.75);
 
     updatePlayTime();
     pauseAll();
@@ -419,7 +427,7 @@ face1_object.on('doubletap', function (event) {
     nay_player.playVideo();
   })
 
-face2_object.on('doubletap', function (event) {
+face2_object.on('tap', function (event) {
     interact.stop();
 
     $("#SO-overlay").css("zIndex",10).css("visibility","visible");
@@ -433,7 +441,7 @@ face2_object.on('doubletap', function (event) {
     SO_player.playVideo();
   })
 
-face3_object.on('doubletap', function (event) {
+face3_object.on('tap', function (event) {
     interact.stop();
 
     $("#JP-overlay").css("zIndex",10).css("visibility","visible");
@@ -447,7 +455,7 @@ face3_object.on('doubletap', function (event) {
     JP_player.playVideo();
   })
 
-face4_object.on('doubletap', function (event) {
+face4_object.on('tap', function (event) {
     interact.stop();
 
     $("#99-overlay").css("zIndex",10).css("visibility","visible");
@@ -461,7 +469,7 @@ face4_object.on('doubletap', function (event) {
     sub_player.playVideo();
   })
 
-face5_object.on('doubletap', function (event) {
+face5_object.on('tap', function (event) {
     interact.stop();
 
     $("#riz-overlay").css("zIndex",10).css("visibility","visible");

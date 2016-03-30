@@ -41,6 +41,7 @@ img{
 }
 body{
 	background-color: black;
+	z-index: 0;
 }
 .draggable{
 	/*float: left;*/
@@ -109,7 +110,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: -10;
-    opacity: 1;
+    opacity: 0;
     visibility: hidden;
     overflow-y:scroll;
     -moz-transition: opacity 1s ease-in-out;
@@ -128,7 +129,7 @@ body{
     height: 100%;
     z-index: -10;
     background-color: #000000;
-    opacity: 0.35;
+    opacity: 0;
     filter: alpha(opacity=70);
     visibility: hidden;
     -moz-transition: opacity 1s ease-in-out;
@@ -140,7 +141,7 @@ body{
 }
 
 #back-shadow{
-	opacity: 0.75;
+	opacity: 0;
 	-moz-transition: opacity 1s ease-in-out;
     -ms-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -153,7 +154,7 @@ body{
 	position: relative;
 	width: 90%;
 	opacity: 1;
-	overflow-y:scroll;
+	/*overflow-y:scroll;*/
 }
 .sample{
 	position: relative;
@@ -185,7 +186,8 @@ li{
 }
 
 .main{
-	color: white;
+	/*color: white;*/
+	color: #e2c1a4;
 	margin: auto;
 /*	border-style: dotted;
 	border-color: white;*/
@@ -201,17 +203,26 @@ li{
 .column{
 	border-style: dotted;
 	border-color: black;
-	overflow-y:scroll;
+	/*overflow-y:scroll;*/
 }
 
 .columns{
 	border-style: dotted;
 	border-color: black;
-	overflow-y:scroll;
+	/*overflow-y:scroll;*/
 }
 
 .row{
-	overflow-y:scroll;
+	/*overflow-y:scroll;*/
+}
+
+img.yale {
+	height: 150;
+	width: 140;
+	/*position: relative;*/
+}
+.yale:hover {
+	background-image: url(images/yaleAF.png);
 }
 
 .enter{
@@ -327,4 +338,10 @@ li{
     50% { opacity: 0; }
     75% { opacity: 0.5; }
     100% { opacity: 1; }
+}
+
+/* Hide scrollbars where possible */
+
+::-webkit-scrollbar { 
+    display: none; 
 }

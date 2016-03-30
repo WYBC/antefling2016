@@ -46,3 +46,20 @@
 - verify with artists
 - server routes (Currently: https://wybc.com/antefling2016/AF.html)
 - favicon
+
+- ages/restrictions
+- no arrow on first tix link (or remove?)
+- date / time
+- single clicks
+- clarify free for yale students
+- mute button
+- reset button
+- text color
+- logistics
+- past lineups / photo album
+- more wybc stuff
+
+- how to motivate clicks?
+- how to motivate drag?
+
+- try starting faces at edge and moving them to middle
