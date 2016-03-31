@@ -144,6 +144,7 @@ body{
 	position: relative;
 	width: 90%;
 	opacity: 1;
+    top: 15%;
 	/*overflow-y:scroll;*/
 }
 .sample{
@@ -191,14 +192,16 @@ li{
 }
 
 .column{
-	border-style: dotted;
-	border-color: black;
+    border: 1px solid rgba(255, 0, 0, 0);
+/*	border-style: dotted;
+	border-color: black;*/
 	/*overflow-y:scroll;*/
 }
 
 .columns{
-	border-style: dotted;
-	border-color: black;
+    border: 1px solid rgba(255, 0, 0, 0);
+/*	border-style: dotted;
+	border-color: black;*/
 	/*overflow-y:scroll;*/
 }
 
@@ -560,7 +563,8 @@ img.yale {
         margin-top: 20px;
     }
     #blink2{
-        top: 62px;
+        /*top: 62px;*/
+        display: none;
     }
     .link1{
         top: 60px;
@@ -657,9 +661,17 @@ img.yale {
     top: 0;
     left: 50%;
 }
-.right_container.row{
+.row{
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1em;
+}
+
+.shade{
+    background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.5);
 }
 
 .text_img { 
@@ -673,7 +685,7 @@ img.yale {
     position: absolute; 
 /*    vertical-align: center;
     text-align: center;*/
-   top: 5%; 
+   top: 20%; 
    left: 0; 
    width: 100%; 
 }
