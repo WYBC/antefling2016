@@ -589,13 +589,28 @@ img.yale {
         left: 0;
         position: fixed;
     }
+
+    .left_container {
+        position: relative;
+        width: 50%;
+        text-align: left;
+        top: 0;
+        left: 0;
+    }
+    .right_container {
+        position: relative;
+        width: 50%;
+        text-align: right;
+        top: 0;
+        left: 50%;
+    }
 }
 @media (max-height: 640px) {
     .text2{
         display: none;
     }
     .cover{
-        position: fixed;
+        position: relative;
         top: 10px;
         left: 10px;
         width: 90px;
@@ -605,8 +620,8 @@ img.yale {
         display: none;
     }
     #perf2{
-        display: block;
-        top: 10px;
+        display: inline;
+        /*top: 10px;*/
     }
     .draggable{
         display: none;
@@ -675,7 +690,7 @@ img.yale {
 
 .shade{
     background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.5);
+   background: rgba(0, 0, 0, 0.3);
 }
 
 .text_img { 

@@ -397,6 +397,7 @@ function pauseAll() {
 interact('.overlay').on('tap', function (event) {
     $('.overlay').fadeOut();
     $(".shadow").fadeOut();
+    $("#back-shadow").fadeOut();
 
     // $(".overlay").css("zIndex",-10).css("visibility","hidden");
     // $(".shadow").css("zIndex",-10).css("visibility","hidden");
@@ -411,7 +412,7 @@ face1_object.on('tap', function (event) {
 
     $("#nay-overlay").fadeTo(400, 1);
     $("#nay-shadow").fadeTo(400, 0.35);
-    $("#nay-overlay").fadeTo(400, 0.75);
+    $("#back-shadow").fadeTo(400, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -429,7 +430,7 @@ face2_object.on('tap', function (event) {
 
     $("#SO-overlay").fadeTo(400, 1);
     $("#SO-shadow").fadeTo(400, 0.35);
-    $("#SO-overlay").fadeTo(400, 0.75);
+    $("#back-shadow").fadeTo(400, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -447,7 +448,7 @@ face3_object.on('tap', function (event) {
 
     $("#JP-overlay").fadeTo(400, 1);
     $("#JP-shadow").fadeTo(400, 0.35);
-    $("#JP-overlay").fadeTo(400, 0.75);
+    $("#back-shadow").fadeTo(400, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -465,7 +466,7 @@ face4_object.on('tap', function (event) {
 
     $("#99-overlay").fadeTo(400, 1);
     $("#99-shadow").fadeTo(400, 0.35);
-    $("#99-overlay").fadeTo(400, 0.75);
+    $("#back-shadow").fadeTo(400, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -483,7 +484,7 @@ face5_object.on('tap', function (event) {
 
     $("#riz-overlay").fadeTo(400, 1);
     $("#riz-shadow").fadeTo(400, 0.35);
-    $("#riz-overlay").fadeTo(400, 0.75);
+    $("#back-shadow").fadeTo(400, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -770,7 +771,97 @@ window.onload = function() {
 
 
 
+///////////// links
 
+interact('#naytronixlink').on('tap', function (event) {
+    interact.stop();
+
+    $("#nay-overlay").css("zIndex",10).css("visibility","visible");
+    $("#nay-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    $("#nay-overlay").fadeTo(400, 1);
+    $("#nay-shadow").fadeTo(400, 0.35);
+    $("#back-shadow").fadeTo(400, 0.6);
+
+    updatePlayTime();
+    pauseAll();
+
+    // nay_player.seekTo(nay_time_start);
+    // nay_player.playVideo();
+  })
+
+interact('#speedyortizlink').on('tap', function (event) {
+    interact.stop();
+
+    $("#SO-overlay").css("zIndex",10).css("visibility","visible");
+    $("#SO-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    $("#SO-overlay").fadeTo(400, 1);
+    $("#SO-shadow").fadeTo(400, 0.35);
+    $("#back-shadow").fadeTo(400, 0.6);
+
+    updatePlayTime();
+    pauseAll();
+
+    // SO_player.seekTo(SO_time);
+    // SO_player.playVideo();
+  })
+
+interact('#junglepussylink').on('tap', function (event) {
+    interact.stop();
+
+    $("#JP-overlay").css("zIndex",10).css("visibility","visible");
+    $("#JP-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    $("#JP-overlay").fadeTo(400, 1);
+    $("#JP-shadow").fadeTo(400, 0.35);
+    $("#back-shadow").fadeTo(400, 0.6);
+
+    updatePlayTime();
+    pauseAll();
+
+    // JP_player.seekTo(JP_time);
+    // JP_player.playVideo();
+  })
+
+interact('#sublimelink').on('tap', function (event) {
+    interact.stop();
+
+    $("#99-overlay").css("zIndex",10).css("visibility","visible");
+    $("#99-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    $("#99-overlay").fadeTo(400, 1);
+    $("#99-shadow").fadeTo(400, 0.35);
+    $("#back-shadow").fadeTo(400, 0.6);
+
+    updatePlayTime();
+    pauseAll();
+
+    // sub_player.seekTo(sub_time);
+    // sub_player.playVideo();
+  })
+
+interact('#rizzlalink').on('tap', function (event) {
+    interact.stop();
+
+    $("#riz-overlay").css("zIndex",10).css("visibility","visible");
+    $("#riz-shadow").css("zIndex",9).css("visibility","visible");
+    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    $("#riz-overlay").fadeTo(400, 1);
+    $("#riz-shadow").fadeTo(400, 0.35);
+    $("#back-shadow").fadeTo(400, 0.6);
+
+    updatePlayTime();
+    pauseAll();
+
+    // riz_player.seekTo(riz_time_start);
+    // riz_player.play();
+  })
 
 
 
