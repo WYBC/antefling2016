@@ -40,7 +40,7 @@
 ## Other
 
 - add css transitions for fade
-- add hit counter
+- add hit counter (  root@breakfast:/var/log/apache2# cat access_log | grep -c /antefling2016/AF.html  )
 - browser compatibility mode
 - comments and clean up code
 - verify with artists
