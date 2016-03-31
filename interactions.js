@@ -394,13 +394,6 @@ function pauseAll() {
     riz_player.pause();
 }
 
-interact('.welcome').on('tap', function (event) {
-    // $(".welcome").fadeOut(10000, $(".welcome").css("zIndex",-10).css("visibility","hidden"));
-    // $(".enter").fadeOut(10000, $(".enter").css("zIndex",-10).css("visibility","hidden"));
-
-    $('.welcome').fadeOut();
-  })
-
 interact('.overlay').on('tap', function (event) {
     $('.overlay').fadeOut();
     $(".shadow").fadeOut();
@@ -506,11 +499,11 @@ face5_object.on('tap', function (event) {
   function voteReady(){
     votes++;
     if (votes >= 4) {
-      fullyready = true;
-      $( ".enter" ).css("display","inline-block");
-      $( "#dot1" ).css("display","none");
-      $( "#dot2" ).css("display","none");
-      $( "#dot3" ).css("display","none");
+      // fullyready = true;
+      // $( ".enter" ).css("display","inline-block");
+      // $( "#dot1" ).css("display","none");
+      // $( "#dot2" ).css("display","none");
+      // $( "#dot3" ).css("display","none");
     };
     console.log(votes);
   }
@@ -680,11 +673,19 @@ function retryLoad(chances){
 
   setTimeout(function(){
     if (votes >= 4 || chances <= 0) {
-      console.log("premature");
+      // console.log("premature");
       $( ".enter" ).css("display","inline-block");
       $( "#dot1" ).css("display","none");
       $( "#dot2" ).css("display","none");
       $( "#dot3" ).css("display","none");
+
+      interact('.welcome').on('tap', function (event) {
+        // $(".welcome").fadeOut(10000, $(".welcome").css("zIndex",-10).css("visibility","hidden"));
+        // $(".enter").fadeOut(10000, $(".enter").css("zIndex",-10).css("visibility","hidden"));
+
+        $('.welcome').fadeOut();
+      })
+
     } else {
       votes = 0;
       console.log("reload");
