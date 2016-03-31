@@ -4,14 +4,14 @@
 
 <!-- - make player not all play at beginning -->
 - force buffering to stay
-- cases where loading fails
+<!-- - cases where loading fails PRIORITY 1 -->
 - fade in/out
 <!-- - deal with end of video -->
 <!-- - save video playback position -->
 <!-- - change rizzla to soundcloud -->
-- enforce endtime on some vids
+<!-- - enforce endtime on some vids PRIORITY 2 -->
 
-## Soundcloud
+## Soundcloud PRIORITY 1
 
 - end?
 - fade?
@@ -21,13 +21,13 @@
 ## landing screen
 
 - handle loading errors
-- disable doubleclick before loaded
+- disable doubleclick before loaded PRIORITY 3
 <!-- - flashing lights -->
 
 ## faces/responsivity
 
 <!-- - adjust resize rules -->
-- mobile
+- mobile PRIORITY 1
 - fire-through on pointer event miss
 
 ## Content
@@ -44,10 +44,9 @@
 - browser compatibility mode
 - comments and clean up code
 - verify with artists
-- server routes (Currently: https://wybc.com/antefling2016/AF.html)
+- server routes (Currently: https://wybc.com/antefling2016/AF.html) PRIORITY 1
 - favicon
 
-- ages/restrictions
 - no arrow on first tix link (or remove?)
 - date / time
 - single clicks

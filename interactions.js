@@ -434,6 +434,10 @@ face2_object.on('tap', function (event) {
     $("#SO-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
+    $("#SO-overlay").fadeTo(400, 1);
+    $("#SO-shadow").fadeTo(400, 0.35);
+    $("#SO-overlay").fadeTo(400, 0.75);
+
     updatePlayTime();
     pauseAll();
 
@@ -447,6 +451,10 @@ face3_object.on('tap', function (event) {
     $("#JP-overlay").css("zIndex",10).css("visibility","visible");
     $("#JP-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    $("#JP-overlay").fadeTo(400, 1);
+    $("#JP-shadow").fadeTo(400, 0.35);
+    $("#JP-overlay").fadeTo(400, 0.75);
 
     updatePlayTime();
     pauseAll();
@@ -462,6 +470,10 @@ face4_object.on('tap', function (event) {
     $("#99-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
+    $("#99-overlay").fadeTo(400, 1);
+    $("#99-shadow").fadeTo(400, 0.35);
+    $("#99-overlay").fadeTo(400, 0.75);
+
     updatePlayTime();
     pauseAll();
 
@@ -475,6 +487,10 @@ face5_object.on('tap', function (event) {
     $("#riz-overlay").css("zIndex",10).css("visibility","visible");
     $("#riz-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
+
+    $("#riz-overlay").fadeTo(400, 1);
+    $("#riz-shadow").fadeTo(400, 0.35);
+    $("#riz-overlay").fadeTo(400, 0.75);
 
     updatePlayTime();
     pauseAll();
@@ -499,6 +515,7 @@ face5_object.on('tap', function (event) {
     console.log(votes);
   }
 
+      console.log("here");
         // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
@@ -530,28 +547,31 @@ face5_object.on('tap', function (event) {
       function onYouTubeIframeAPIReady() {
         SO_player = new YT.Player('SO-player', {
           videoId: 'YMxKdyjpRq4',
-          playerVars: { 'controls': 0 },
+          playerVars: { 'autoplay': 1, 'controls': 0, 'endSeconds': 514 },
           events: {
             'onReady': SO_onPlayerReady,
-            'onStateChange': onPlayerStateChange
+            'onStateChange': onPlayerStateChange,
+            'onError': onPlayerError
           }
         });
 
         nay_player = new YT.Player('nay-player', {
           videoId: '_z216oK-sb4',
-          playerVars: { 'controls': 0 },
+          playerVars: { 'autoplay': 1, 'controls': 0 },
           events: {
             'onReady': nay_onPlayerReady,
-            'onStateChange': onPlayerStateChange
+            'onStateChange': onPlayerStateChange,
+            'onError': onPlayerError
           }
         });
 
         JP_player = new YT.Player('JP-player', {
           videoId: 'AtwVdabW0GE',
-          playerVars: { 'controls': 0 },
+          playerVars: { 'autoplay': 1, 'controls': 0 },
           events: {
             'onReady': JP_onPlayerReady,
-            'onStateChange': onPlayerStateChange
+            'onStateChange': onPlayerStateChange,
+            'onError': onPlayerError
           }
         });
 
@@ -560,16 +580,19 @@ face5_object.on('tap', function (event) {
         //   playerVars: { 'controls': 0 },
         //   events: {
         //     'onReady': riz_onPlayerReady,
-        //     'onStateChange': onPlayerStateChange
-        //   }
+        //     'onStateChange': onPlayerStateChange,
+    //    'onError': onPlayerError  //   
+     //
+     // }
         // });
 
         sub_player = new YT.Player('sub-player', {
           videoId: 'kIPQpWVZXNU',
-          playerVars: { 'controls': 0 },
+          playerVars: { 'autoplay': 1, 'controls': 0 },
           events: {
             'onReady': sub_onPlayerReady,
-            'onStateChange': onPlayerStateChange
+            'onStateChange': onPlayerStateChange,
+            'onError': onPlayerError
           }
         });
       }
@@ -604,6 +627,12 @@ face5_object.on('tap', function (event) {
       function onPlayerReady(event) {
         event.target.setVolume(100);
         voteReady();
+      }
+
+      // Reload video
+      function onPlayerError(event){
+        console.log("playback error");
+        event.target.setPlaybackQuality("default");
       }
 
       // 5. The API calls this function when the player's state changes.
@@ -646,6 +675,36 @@ face5_object.on('tap', function (event) {
       //   player.stopVideo();
       // }
 
+// code to retry loading
+function retryLoad(chances){
+
+  setTimeout(function(){
+    if (votes >= 4 || chances <= 0) {
+      console.log("premature");
+      $( ".enter" ).css("display","inline-block");
+      $( "#dot1" ).css("display","none");
+      $( "#dot2" ).css("display","none");
+      $( "#dot3" ).css("display","none");
+    } else {
+      votes = 0;
+      console.log("reload");
+      
+      // tag.remove(); // removes script from dom
+
+      // reload API
+
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      retryLoad(chances-1);
+    };
+
+  }, 3000);
+}
+
 var riz_player;
 
 // code to handle page loading
@@ -656,6 +715,11 @@ window.onload = function() {
   console.log(document.querySelector("#riziframe"))
   var iframeElement   = document.querySelector("#riziframe");
   riz_player      = SC.Widget(iframeElement);
+
+  riz_player.bind("finish", function(){
+    riz_player.seekTo(0);
+    riz_player.pause();
+  })
 
   // assign"zIndex"s to faces
   $('#face1').css("zIndex",1);
@@ -697,6 +761,10 @@ window.onload = function() {
 
   console.log("DONE ONLOAD");
   // console.log("translate(" + face1x / winX + "%," + face1y / winY + "%)");
+
+  var chances = 1;
+  retryLoad(chances);
+
 };
 
 
