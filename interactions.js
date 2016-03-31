@@ -327,7 +327,7 @@ function demote(element, interactible, event){
   });
     
     // push the target to the back
-    element.css("zIndex",1);
+    element.css("zIndex",2);
 
     // re-process all lower events
     $(images).each( function () {
@@ -358,7 +358,7 @@ function promote(element, interactible, event){
   });
     
     // push the target to the front
-    element.css("zIndex",5);
+    element.css("zIndex",6);
 
     // re-process all lower events
     $(images).each( function () {
@@ -723,11 +723,11 @@ window.onload = function() {
   })
 
   // assign"zIndex"s to faces
-  $('#face1').css("zIndex",1);
-  $('#face2').css("zIndex",5);
-  $('#face3').css("zIndex",3);
-  $('#face4').css("zIndex",4);
-  $('#face5').css("zIndex",2);
+  $('#face1').css("zIndex",2);
+  $('#face2').css("zIndex",6);
+  $('#face3').css("zIndex",4);
+  $('#face4').css("zIndex",5);
+  $('#face5').css("zIndex",3);
   listAllZ();
 
   var face1x = 300.0 / 1036.0, face1y = 420.0 / 701.0;
