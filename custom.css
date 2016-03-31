@@ -566,6 +566,9 @@ img.yale {
         /*top: 62px;*/
         display: none;
     }
+    #ticket{
+        position: relative;
+    }
     .link1{
         top: 60px;
     }
@@ -662,10 +665,10 @@ img.yale {
     left: 50%;
 }
 .row{
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    margin-top: 2;
+    margin-bottom: 2;
+    padding-top: 2;
+    padding-bottom: 2;
     line-height: 1em;
 }
 
@@ -678,18 +681,22 @@ img.yale {
    position: relative; 
    text-align: center;
    width: 100%; /* for IE 6 */
-   font-size: 20px;
+   font-size: 22px;
 }
 
 #ticket { 
     position: absolute; 
 /*    vertical-align: center;
     text-align: center;*/
-   top: 20%; 
+   top: 22%; 
    left: 0; 
    width: 100%; 
 }
 
 #mute{
     font-size: 20px;
+}
+
+.middle{
+    height: 80%;
 }
