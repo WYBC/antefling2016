@@ -640,6 +640,44 @@ img.yale {
         }
     }
 
-.container {
-	width: 100;
+/*.container {
+    width: 100%;
+}*/
+.left_container {
+	position: fixed;
+    width: 50%;
+    text-align: left;
+    top: 0;
+    left: 0;
+}
+.right_container {
+    position: fixed;
+    width: 50%;
+    text-align: left;
+    top: 0;
+    left: 50%;
+}
+.right_container.row{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text_img { 
+   position: relative; 
+   text-align: center;
+   width: 100%; /* for IE 6 */
+   font-size: 20px;
+}
+
+#ticket { 
+    position: absolute; 
+/*    vertical-align: center;
+    text-align: center;*/
+   top: 5%; 
+   left: 0; 
+   width: 100%; 
+}
+
+#mute{
+    font-size: 20px;
 }
