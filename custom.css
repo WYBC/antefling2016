@@ -214,7 +214,7 @@ li{
         left: 10px;
         width: calc(100% - 120px);
         height: auto;
-        z-index: 1;
+        z-index: 0;
     }
 #dates{
     font-family: "VT323";
@@ -264,9 +264,9 @@ li{
     width: 100px;
     font-family: "VT323";
     font-size: 20px;
-    position: fixed;
+/*    position: fixed;
     right: 10px;
-    bottom: 120px;
+    bottom: 120px;*/
     color: #e2c1a4;
 }
 #perf2{
@@ -535,12 +535,25 @@ img.yale {
     display: none; 
 }
 @media (max-width: 740px) {
+    .show_small{
+        z-index: 10;
+        display: inline;
+    }
+    .left_container{
+        display: none;
+    }
+    .right_container{
+        display: none;
+    }
     .text2{
         display: none;
     }
-
     .cover{
-        position: fixed;
+        display: none;
+    }
+    .cover2{
+        display: inline;
+        position: relative;
         top: 10px;
         left: 10px;
         width: 90px;
@@ -609,7 +622,7 @@ img.yale {
     .text2{
         display: none;
     }
-    .cover{
+    .cover2{
         position: relative;
         top: 10px;
         left: 10px;
@@ -634,7 +647,8 @@ img.yale {
         margin-top: 20px;
     }
     #blink2{
-        top: 62px;
+        /*top: 62px;*/
+        display: none;
     }
     .link1{
         top: 60px;
@@ -656,12 +670,12 @@ img.yale {
         position: fixed;
     }
 }
-    @media (max-height: 550px) {
+/*    @media (max-height: 550px) {
         #bar{
             left: 10px;
             bottom: 130px;
         }
-    }
+    }*/
 
 /*.container {
     width: 100%;
@@ -674,6 +688,7 @@ img.yale {
     left: 0;
 }
 .right_container {
+    z-index: 1;
     position: fixed;
     width: 50%;
     text-align: left;
@@ -713,6 +728,17 @@ img.yale {
     font-size: 18px;
 }
 
-.middle{
-    height: 80%;
+.right_mid_container {
+    position: fixed;
+    width: 50%;
+    text-align: left;
+    top: 35%;
+    left: 50%;
+}
+
+.cover2{
+    display: none;
+}
+.show_small{
+    display: none;
 }
