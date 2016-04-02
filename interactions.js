@@ -410,9 +410,9 @@ face1_object.on('tap', function (event) {
     $("#nay-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#nay-overlay").fadeTo(400, 1);
-    $("#nay-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#nay-overlay").fadeTo(200, 1);
+    $("#nay-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -428,9 +428,9 @@ face2_object.on('tap', function (event) {
     $("#SO-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#SO-overlay").fadeTo(400, 1);
-    $("#SO-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#SO-overlay").fadeTo(200, 1);
+    $("#SO-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -446,9 +446,9 @@ face3_object.on('tap', function (event) {
     $("#JP-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#JP-overlay").fadeTo(400, 1);
-    $("#JP-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#JP-overlay").fadeTo(200, 1);
+    $("#JP-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -464,9 +464,9 @@ face4_object.on('tap', function (event) {
     $("#99-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#99-overlay").fadeTo(400, 1);
-    $("#99-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#99-overlay").fadeTo(200, 1);
+    $("#99-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -482,9 +482,9 @@ face5_object.on('tap', function (event) {
     $("#riz-shadow").css("zIndex",9).css("visibility","visible");
     $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#riz-overlay").fadeTo(400, 1);
-    $("#riz-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#riz-overlay").fadeTo(200, 1);
+    $("#riz-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -776,13 +776,13 @@ window.onload = function() {
 interact('#naytronixlink').on('tap', function (event) {
     interact.stop();
 
-    $("#nay-overlay").css("zIndex",10).css("visibility","visible");
-    $("#nay-shadow").css("zIndex",9).css("visibility","visible");
-    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+    // $("#nay-overlay").css("zIndex",10).css("visibility","visible");
+    // $("#nay-shadow").css("zIndex",9).css("visibility","visible");
+    // $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#nay-overlay").fadeTo(400, 1);
-    $("#nay-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#nay-overlay").fadeTo(200, 1);
+    $("#nay-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -794,13 +794,13 @@ interact('#naytronixlink').on('tap', function (event) {
 interact('#speedyortizlink').on('tap', function (event) {
     interact.stop();
 
-    $("#SO-overlay").css("zIndex",10).css("visibility","visible");
-    $("#SO-shadow").css("zIndex",9).css("visibility","visible");
-    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+    // $("#SO-overlay").css("zIndex",10).css("visibility","visible");
+    // $("#SO-shadow").css("zIndex",9).css("visibility","visible");
+    // $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#SO-overlay").fadeTo(400, 1);
-    $("#SO-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#SO-overlay").fadeTo(200, 1);
+    $("#SO-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
@@ -812,55 +812,55 @@ interact('#speedyortizlink').on('tap', function (event) {
 interact('#junglepussylink').on('tap', function (event) {
     interact.stop();
 
-    $("#JP-overlay").css("zIndex",10).css("visibility","visible");
-    $("#JP-shadow").css("zIndex",9).css("visibility","visible");
-    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+    // $("#JP-overlay").css("zIndex",10).css("visibility","visible");
+    // $("#JP-shadow").css("zIndex",9).css("visibility","visible");
+    // $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#JP-overlay").fadeTo(400, 1);
-    $("#JP-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#JP-overlay").fadeTo(200, 1);
+    $("#JP-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
 
-    // JP_player.seekTo(JP_time);
-    // JP_player.playVideo();
+    JP_player.seekTo(JP_time);
+    JP_player.playVideo();
   })
 
 interact('#sublimelink').on('tap', function (event) {
     interact.stop();
 
-    $("#99-overlay").css("zIndex",10).css("visibility","visible");
-    $("#99-shadow").css("zIndex",9).css("visibility","visible");
-    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+    // $("#99-overlay").css("zIndex",10).css("visibility","visible");
+    // $("#99-shadow").css("zIndex",9).css("visibility","visible");
+    // $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#99-overlay").fadeTo(400, 1);
-    $("#99-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#99-overlay").fadeTo(200, 1);
+    $("#99-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
 
-    // sub_player.seekTo(sub_time);
-    // sub_player.playVideo();
+    sub_player.seekTo(sub_time);
+    sub_player.playVideo();
   })
 
 interact('#rizzlalink').on('tap', function (event) {
     interact.stop();
 
-    $("#riz-overlay").css("zIndex",10).css("visibility","visible");
-    $("#riz-shadow").css("zIndex",9).css("visibility","visible");
-    $("#back-shadow").css("zIndex",8).css("visibility","visible");
+    // $("#riz-overlay").css("zIndex",10).css("visibility","visible");
+    // $("#riz-shadow").css("zIndex",9).css("visibility","visible");
+    // $("#back-shadow").css("zIndex",8).css("visibility","visible");
 
-    $("#riz-overlay").fadeTo(400, 1);
-    $("#riz-shadow").fadeTo(400, 0.35);
-    $("#back-shadow").fadeTo(400, 0.6);
+    $("#riz-overlay").fadeTo(200, 1);
+    $("#riz-shadow").fadeTo(200, 0.35);
+    $("#back-shadow").fadeTo(200, 0.6);
 
     updatePlayTime();
     pauseAll();
 
-    // riz_player.seekTo(riz_time_start);
-    // riz_player.play();
+    riz_player.seekTo(riz_time_start);
+    riz_player.play();
   })
 
 
