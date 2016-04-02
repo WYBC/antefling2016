@@ -3,62 +3,72 @@
 ## YOUTUBE content
 
 <!-- - make player not all play at beginning -->
-- force buffering to stay
+<!-- - force buffering to stay -->
 <!-- - cases where loading fails PRIORITY 1 -->
-- fade in/out
+- fade in/out (volume)
 <!-- - deal with end of video -->
 <!-- - save video playback position -->
 <!-- - change rizzla to soundcloud -->
 <!-- - enforce endtime on some vids PRIORITY 2 -->
 
-## Soundcloud PRIORITY 1
+## Soundcloud
 
-- end?
+<!-- - end?
 - fade?
 - loading?
-- seek  /  time
+- seek  /  time -->
+- browser compatibility check
 
 ## landing screen
 
-- handle loading errors
-- disable doubleclick before loaded PRIORITY 3
+<!-- - handle loading errors
+- disable doubleclick before loaded PRIORITY 3 -->
 <!-- - flashing lights -->
 
 ## faces/responsivity
 
 <!-- - adjust resize rules -->
-- mobile PRIORITY 1
 - fire-through on pointer event miss
+- faces sometimes snapping to line above window end
 
-## Content
+## Small view
+
+- make content extend to bottom
+- pull up specially styled bios
+
+## Text
+
+- clarify free for yale students
+- more wybc stuff
+- "midnit"
+- facebook event description
 
 <!-- - add bios -->
 <!-- - make bios scrollable -->
-- styling/fonts
-- add links
+<!-- - styling/fonts
+- add links -->
 
-## Other
+## Other / Features
 
-- add css transitions for fade
-- add hit counter (  root@breakfast:/var/log/apache2# cat access_log | grep -c /antefling2016/AF.html  )
-- browser compatibility mode
 - comments and clean up code
-- verify with artists
-- server routes (Currently: https://wybc.com/antefling2016/AF.html) PRIORITY 1
-- favicon
+- reset face button
 
-- no arrow on first tix link (or remove?)
-- date / time
-- single clicks
-- clarify free for yale students
-- mute button
-- reset button
-- text color
-- logistics
-- past lineups / photo album
-- more wybc stuff
+<!-- - add css transitions for fade -->
+<!-- - add hit counter (  root@breakfast:/var/log/apache2# cat access_log | grep -c /antefling2016/AF.html  ) -->
+<!-- - browser compatibility mode -->
+<!-- - verify with artists -->
+<!-- - server routes (Currently: https://wybc.com/antefling2016/AF.html) PRIORITY 1 -->
+<!-- - favicon -->
 
-- how to motivate clicks?
-- how to motivate drag?
+<!-- - no arrow on first tix link (or remove?) -->
+<!-- - date / time -->
+<!-- - single clicks -->
+<!-- - mute button -->
+<!-- - text color -->
+<!-- - logistics -->
+<!-- - past lineups / photo album -->
 
-- try starting faces at edge and moving them to middle
+<!-- - how to motivate clicks? -->
+<!-- - how to motivate drag? -->
+
+<!-- - try starting faces at edge and moving them to middle -->
