@@ -649,22 +649,58 @@ img.yale {
     }
 }
 @media (max-height: 640px) {
+    #dates2{
+        font-family: "VT323";
+        font-size: 28px;
+        color: white;
+    }
+    #doors2{
+        font-family: "VT323";
+        font-size: 20px;
+        color: #e2c1a4;
+    }
+    #times2{
+        font-family: "VT323";
+        font-size: 20px;
+        color: white;
+    }
+    #price2{
+        font-family: "VT323";
+        font-size: 20px;
+        color: #e2c1a4;
+    }
+    .show_small{
+        z-index: 10;
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+    }
+    .right_col{
+        text-align: right;
+    }
+    .left_container{
+        display: none;
+    }
+    .right_container{
+        display: none;
+    }
     .text2{
         display: none;
     }
-    .cover2{
-        position: relative;
-        top: 10px;
-        left: 10px;
-        width: 90px;
-        height: auto;
+    .cover{
+        display: none;
     }
+    .cover3{
+        display: inline;
+        position: relative;
+    }
+
     #perf{
         display: none;
     }
     #perf2{
-        display: inline;
-        /*top: 10px;*/
+        display: block;
+        top: 10px;
     }
     .draggable{
         display: none;
@@ -679,6 +715,12 @@ img.yale {
     #blink2{
         /*top: 62px;*/
         display: none;
+    }
+    #ticket2{
+        position: relative;
+    }
+    #mute2{
+        position: relative;
     }
     .link1{
         top: 60px;
@@ -698,6 +740,21 @@ img.yale {
         bottom: 0;
         left: 0;
         position: fixed;
+    }
+
+    .left_container {
+        position: relative;
+        width: 50%;
+        text-align: left;
+        top: 0;
+        left: 0;
+    }
+    .right_container {
+        position: relative;
+        width: 50%;
+        text-align: right;
+        top: 0;
+        left: 50%;
     }
 }
 /*    @media (max-height: 550px) {
