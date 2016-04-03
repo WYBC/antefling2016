@@ -30,16 +30,19 @@
 <!-- - adjust resize rules -->
 - fire-through on pointer event miss
 - faces sometimes snapping to line above window end
+- if resize after load, faces jump
 
 ## Small view
 
 - make content extend to bottom
 - pull up specially styled bios
+- play on click
 
 ## Text
 
 - clarify free for yale students
-- more wybc stuff
+- more wybc stuff?
+- alignment of "bar" section
 - "midnit"
 - facebook event description
 

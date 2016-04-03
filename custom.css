@@ -34,46 +34,22 @@ body{
 	z-index: 0;
 }
 .draggable{
-	/*float: left;*/
-	/*position: absolute;*/
 	background-size: contain;
-
-/*  -webkit-shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
-  shape-outside: polygon(0 0,24 166,530 54,518 0,0 0);
-  -webkit-clip-path: polygon(0 0,24 166,530 54,518 0,0 0);*/
-	
-/*  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);*/
 }
 #face1{
 	width: 440px;
-	/*left: 20%;*/
-	/*top: 75%;*/
-	/*transform: translate(341px, -159px);*/
 }
 #face2{
 	width: 290px;
-	/*left: 20%;*/
-	/*top: 30%;*/
-	/*transform: translate(-152px, -283px);*/
 }
 #face3{
 	width: 350px;
-	/*left: 20%;*/
-	/*top: 30%;*/
-	/*transform: translate(-325px, -297px);*/
 }
 #face4{
 	width: 530px;
-	/*left: 20%;*/
-	/*top: 10%;*/
-	/*transform: translate(262px, -575px);*/
 }
 #face5{
 	width: 450px;
-	/*left: 20%;*/
-	/*top: 20%;*/
-	/*transform: translate(-136px, -714px);*/
 }
 
 #face1:hover{
@@ -145,7 +121,6 @@ body{
 	width: 90%;
 	opacity: 1;
     top: 15%;
-	/*overflow-y:scroll;*/
 }
 .sample{
 	position: relative;
@@ -169,19 +144,10 @@ iframe{
     height: 100%;
 	z-index: 100;
 	background-color: #000000;
-	/*visibility: hidden;*/
 }
-
-li{
-	list-style-type: none;
-}
-
 .main{
-	/*color: white;*/
 	color: #e2c1a4;
 	margin: auto;
-/*	border-style: dotted;
-	border-color: white;*/
 	padding-top: 10%;
 	-moz-transition: opacity 1s ease-in-out;
     -ms-transition: opacity 1s ease-in-out;
@@ -193,20 +159,9 @@ li{
 
 .column{
     border: 1px solid rgba(255, 0, 0, 0);
-/*	border-style: dotted;
-	border-color: black;*/
-	/*overflow-y:scroll;*/
 }
-
 .columns{
     border: 1px solid rgba(255, 0, 0, 0);
-/*	border-style: dotted;
-	border-color: black;*/
-	/*overflow-y:scroll;*/
-}
-
-.row{
-	/*overflow-y:scroll;*/
 }
 .cover{
         position: fixed;
@@ -234,9 +189,6 @@ li{
 }
 #blink2{
     position: relative;
-/*    left: 7px;
-    top: 12px;
-    width: 90px;*/
     height: auto;
 }
 #blink{
@@ -264,9 +216,6 @@ li{
     width: 100px;
     font-family: "VT323";
     font-size: 20px;
-/*    position: fixed;
-    right: 10px;
-    bottom: 120px;*/
     color: #e2c1a4;
 }
 #perf2{
@@ -534,12 +483,22 @@ img.yale {
     visibility: hidden;
 }
 
+.bottom{
+    position: fixed;
+    bottom: 0;
+}
+
 /* Hide scrollbars where possible */
 
 ::-webkit-scrollbar { 
     display: none; 
 }
 @media (max-width: 740px) {
+    .shade{
+        background: rgb(100, 100, 100); /* fallback color */
+        background: rgba(100, 100, 100, 0.3);
+        width: 80%;
+    }
     #dates2{
         font-family: "VT323";
         font-size: 28px;

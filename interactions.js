@@ -4,11 +4,11 @@ var face1_object = interact('#face1').draggable({
     // enable inertial throwing
     inertia: false,
     // keep the element within the area of it's parent
-    restrict: {
-      restriction: "parent",
-      endOnly: true,
-      elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
-    },
+    // restrict: {
+    //   restriction: "parent",
+    //   endOnly: true,
+    //   elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
+    // },
 
     onstart: function (event) {console.log("drag: 1");},// fade in?
     // call this function on every dragmove event
@@ -22,11 +22,11 @@ var face2_object = interact('#face2').draggable({
     // enable inertial throwing
     inertia: false,
     // keep the element within the area of it's parent
-    restrict: {
-      restriction: "parent",
-      endOnly: true,
-      elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
-    },
+    // restrict: {
+    //   restriction: "parent",
+    //   endOnly: true,
+    //   elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
+    // },
 
     onstart: function (event) {console.log("drag: 2");},// fade in?
     // call this function on every dragmove event
@@ -40,11 +40,11 @@ var face3_object = interact('#face3').draggable({
     // enable inertial throwing
     inertia: false,
     // keep the element within the area of it's parent
-    restrict: {
-      restriction: "parent",
-      endOnly: true,
-      elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
-    },
+    // restrict: {
+    //   restriction: "parent",
+    //   endOnly: true,
+    //   elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
+    // },
 
     onstart: function (event) {console.log("drag: 3");},// fade in?
     // call this function on every dragmove event
@@ -58,11 +58,11 @@ var face4_object = interact('#face4').draggable({
     // enable inertial throwing
     inertia: false,
     // keep the element within the area of it's parent
-    restrict: {
-      restriction: "parent",
-      endOnly: true,
-      elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
-    },
+    // restrict: {
+    //   restriction: "parent",
+    //   endOnly: true,
+    //   elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
+    // },
 
     onstart: function (event) {console.log("drag: 4");},// fade in?
     // call this function on every dragmove event
@@ -76,11 +76,11 @@ var face5_object = interact('#face5').draggable({
     // enable inertial throwing
     inertia: false,
     // keep the element within the area of it's parent
-    restrict: {
-      restriction: "parent",
-      endOnly: true,
-      elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
-    },
+    // restrict: {
+    //   restriction: "parent",
+    //   endOnly: true,
+    //   elementRect: { top: 0.75, left: 0.75, bottom: -2, right: 0.25 }
+    // },
 
     onstart: function (event) {console.log("drag: 5");},// fade in?
     // call this function on every dragmove event
